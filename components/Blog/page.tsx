@@ -24,7 +24,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           src={image}
           alt={title}
           fill
-          className="object-cover" // Resmin düzgün görünmesi için class ekleyin
+          className="object-cover"
           sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw" // Responsive için boyutlandırma
         />
       </Link>
@@ -43,12 +43,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         <div className="flex items-center">
           <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
             <div className="mr-4">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full">
+              <div className="relative h-32 w-32 overflow-hidden rounded-full ">
                 <Image
                   src={author.image}
                   alt={author.name}
+                  quality={95}
+                  priority
                   fill
-                  className="object-cover" // Resmin düzgün görünmesi için class ekleyin
+                  className="scale-50 rounded-full object-cover transition hover:scale-150" // Resmin düzgün görünmesi için class ekleyin
                 />
               </div>
             </div>

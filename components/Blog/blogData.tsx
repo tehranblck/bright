@@ -60,7 +60,7 @@ const blogData: Blog[] = [
     image: "/images/blog/learn_lang.jpg",
     author: {
       name: "Elvira Ocaqquliyeva",
-      image: "/images/blog/author-01.png",
+      image: "/images/blog/elvira.jpg",
       designation: "Rus dili təlimçisi",
     },
     tags: ["Xarici dil", "Dil öyrənmə", "Peşəkar inkişaf"],
@@ -147,7 +147,7 @@ const blogData: Blog[] = [
       designation: "Dil Mütəxəssisi,Ingilis dili təlimçisi",
     },
     tags: ["Təhsil", "Öyrənmə metodları", "Dil öyrənmə"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 3,
@@ -202,7 +202,7 @@ const blogData: Blog[] = [
       designation: "Front-End Developer və təlimçi",
     },
     tags: ["React", "Web Tətbiqi", "Front-End"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 4,
@@ -300,11 +300,11 @@ const blogData: Blog[] = [
     image: "/images/blog/css_flexbox.avif",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-05.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["CSS", "Flexbox", "Web Tətbiqi"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 6,
@@ -342,11 +342,11 @@ const blogData: Blog[] = [
     image: "/images/blog/ts.jpg",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-06.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["TypeScript", "JavaScript", "Web Tətbiqi"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 7,
@@ -393,7 +393,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Git", "Versiya İdarəsi", "Web Tətbiqi"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 8,
@@ -431,7 +431,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["API", "Web Tətbiqi", "Backend"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
   {
     id: 9,
@@ -478,7 +478,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Performans", "Web Tətbiqi", "Optimizasiya"],
-    publishDate: "2025",
+    publishDate: "2024",
   },
 ];
 
