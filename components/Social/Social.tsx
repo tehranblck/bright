@@ -43,8 +43,7 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
+    gap: 10px;
   }
 
   /* for all social containers*/
