@@ -197,9 +197,9 @@ const blogData: Blog[] = [
     ],
     image: "/images/blog/react.webp",
     author: {
-      name: "Səid Müstəqil",
-      image: "/images/blog/author-02.png",
-      designation: "Front-End Developer",
+      name: "Tehran Bayramov",
+      image: "/images/blog/Tehran.jpg",
+      designation: "Front-End Developer və təlimçi",
     },
     tags: ["React", "Web Tətbiqi", "Front-End"],
     publishDate: "2025",
@@ -249,7 +249,7 @@ const blogData: Blog[] = [
     image: "/images/blog/js_dom.jpg",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-03.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["JavaScript", "DOM", "Web Tətbiqi"],
@@ -389,7 +389,7 @@ const blogData: Blog[] = [
     image: "/images/blog/git.png",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-07.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Git", "Versiya İdarəsi", "Web Tətbiqi"],
@@ -427,7 +427,7 @@ const blogData: Blog[] = [
     image: "/images/blog/api.avif",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-08.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["API", "Web Tətbiqi", "Backend"],
@@ -474,7 +474,7 @@ const blogData: Blog[] = [
     image: "/images/blog/optimization.jpg",
     author: {
       name: "Tehran Bayramov",
-      image: "/images/blog/author-09.png",
+      image: "/images/blog/Tehran.jpg",
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Performans", "Web Tətbiqi", "Optimizasiya"],
