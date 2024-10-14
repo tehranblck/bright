@@ -59,9 +59,9 @@ const blogData: Blog[] = [
     ],
     image: "/images/blog/learn_lang.jpg",
     author: {
-      name: "Elxan Elatli",
+      name: "Elvira Ocaqquliyeva",
       image: "/images/blog/author-01.png",
-      designation: "Muellim",
+      designation: "Rus dili təlimçisi",
     },
     tags: ["Xarici dil", "Dil öyrənmə", "Peşəkar inkişaf"],
     publishDate: "2025",
