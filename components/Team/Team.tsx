@@ -15,7 +15,7 @@ const teamMembers = [
     image: '/images/blog/Tehranpng.png',
   },
   {
-    name: 'Kenji Milton',
+    name: 'Kenji MiltsSon',
     title: 'Team Member',
     image: '/images/blog/Tehranpng.png',
   },
