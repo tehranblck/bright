@@ -64,7 +64,7 @@ const blogData: Blog[] = [
       designation: "Rus dili təlimçisi",
     },
     tags: ["Xarici dil", "Dil öyrənmə", "Peşəkar inkişaf"],
-    publishDate: "2024",
+    publishDate: "2024-05-19",
   },
   {
     id: 2,
@@ -144,10 +144,10 @@ const blogData: Blog[] = [
     author: {
       name: "Nərgiz Allahverdiyeva",
       image: "/images/blog/author-04.png",
-      designation: "Dil Mütəxəssisi,Ingilis dili təlimçisi",
+      designation: "Dil Mütəxəssisi, Ingilis dili təlimçisi",
     },
     tags: ["Təhsil", "Öyrənmə metodları", "Dil öyrənmə"],
-    publishDate: "2024",
+    publishDate: "2024-10-01",
   },
   {
     id: 3,
@@ -202,7 +202,7 @@ const blogData: Blog[] = [
       designation: "Front-End Developer və təlimçi",
     },
     tags: ["React", "Web Tətbiqi", "Front-End"],
-    publishDate: "2024",
+    publishDate: "2024-6-11",
   },
   {
     id: 4,
@@ -253,7 +253,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["JavaScript", "DOM", "Web Tətbiqi"],
-    publishDate: "2024",
+    publishDate: "2024-01-09",
   },
   {
     id: 5,
@@ -304,7 +304,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["CSS", "Flexbox", "Web Tətbiqi"],
-    publishDate: "2024",
+    publishDate: "2024-07-15",
   },
   {
     id: 6,
@@ -346,7 +346,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["TypeScript", "JavaScript", "Web Tətbiqi"],
-    publishDate: "2024",
+    publishDate: "2024-08-14",
   },
   {
     id: 7,
@@ -393,7 +393,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Git", "Versiya İdarəsi", "Web Tətbiqi"],
-    publishDate: "2024",
+    publishDate: "2024-10-12",
   },
   {
     id: 8,
@@ -431,7 +431,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["API", "Web Tətbiqi", "Backend"],
-    publishDate: "2024",
+    publishDate: "2024-03-04",
   },
   {
     id: 9,
@@ -478,7 +478,7 @@ const blogData: Blog[] = [
       designation: "Front-end developer və təlimçi",
     },
     tags: ["Performans", "Web Tətbiqi", "Optimizasiya"],
-    publishDate: "2024",
+    publishDate: "2024-02-14",
   },
 ];
 
