@@ -14,6 +14,22 @@ const AboutSectionTwo: React.FC = () => {
   // Dil bilgilerini içeren dizi
   const languageSections: LanguageSection[] = [
     {
+      title: "Rus Dili",
+      subtitle: "Red Kalinka metodu ilə rus dili",
+      content: [
+        "dərsləri sadə və sistemli yanaşması ilə rus dilini öyrənmək istəyənlər üçün xüsusi olaraq hazırlanmış bir metoddur. Bu metod tələbələrə dili asan və sürətli şəkildə mənimsəməyə kömək edir.",
+        "1. Praktik yanaşma: Red Kalinka metodu dili real həyat situasiyalarında istifadə etməyi öyrədir. Danışıq və dinləmə bacarıqlarına xüsusi önəm verilir, tələbələr gündəlik həyatda rahat ünsiyyət qurmağı öyrənirlər.",
+        "2. Səviyyələr üzrə tədris: Dərslər A1-dən C2-yə qədər müxtəlif səviyyələr üzrə təşkil olunur və hər səviyyədə şagirdlərin bacarıqları mərhələli şəkildə inkişaf etdirilir.",
+        "3. Addım-addım öyrənmə: Hər dərs bir-birinin üzərinə qurulur, bu da tələbələrin yeni bilikləri rahatlıqla mənimsəməsinə və daha möhkəm təməl qurmasına imkan verir.",
+        "4. Audio və vizual materiallar: Dərslərdə səsli materiallar və videolar istifadə olunur, bu da dil öyrənmə prosesini daha maraqlı və interaktiv edir.",
+        "5. İmtahanlara hazırlıq: Red Kalinka metodu, rus dili sertifikatlarına (TRKI) hazırlaşan tələbələr üçün xüsusi proqramlar təklif edir.",
+        "Red Kalinka metodu ilə dərslər, rus dilini öyrənmək üçün ideal seçimdir, çünki praktiki yanaşma və geniş resurslar sayəsində tələbələr dili sürətli və effektiv şəkildə mənimsəyirlər.",
+      ],
+      imageSrc: "/images/about/04.png",
+      imageAlt: "Rus Dili",
+      reverse: true,
+    },
+    {
       title: "İngilis Dili",
       subtitle: "Cambridge metodu ilə ingilis dili",
       content: [
@@ -25,7 +41,7 @@ const AboutSectionTwo: React.FC = () => {
         "5. Texnologiya dəstəyi: Dərslər zamanı interaktiv rəqəmsal platformalar və resurslar istifadə olunur.",
         "Cambridge metodu ilə dərslər, həm dili öyrənmək, həm də beynəlxalq sertifikatlar almaq üçün ideal seçimdir.",
       ],
-      imageSrc: "/images/about/ingilisce.jpg",
+      imageSrc: "/images/about/02.png",
       imageAlt: "İngilis Dili",
       reverse: false,
     },
@@ -41,7 +57,7 @@ const AboutSectionTwo: React.FC = () => {
         "5. Dinləmə və düzgün tələffüz: Dərslər zamanı səsli materiallardan istifadə olunur ki, tələbələr alman dilinin axıcılığını və tələffüzünü daha yaxşı qavraya bilsinlər.",
         "Bu yanaşma, dili qrammatikadan daha çox gündəlik ünsiyyət vasitəsi kimi öyrənmək istəyən tələbələr üçün ideal bir seçimdir.",
       ],
-      imageSrc: "/images/about/almanca.png",
+      imageSrc: "/images/about/01.png",
       imageAlt: "Alman Dili",
       reverse: true,
     },
@@ -57,26 +73,11 @@ const AboutSectionTwo: React.FC = () => {
         "5. Dinləmə və tələffüz inkişafı: Fransız dilinin təbii axıcılığına və düzgün tələffüzə xüsusi diqqət yetirilir, bunun üçün səsli materiallar və danışıq təlimləri istifadə olunur.",
         "Danışıq əsaslı fransız dili dərsləri, dili effektiv öyrənmək və real həyatda ünsiyyət qurmaq istəyənlər üçün ən uyğun tədris metodudur.",
       ],
-      imageSrc: "/images/about/fransizca.jpg",
+      imageSrc: "/images/about/03.png",
       imageAlt: "Fransız Dili",
       reverse: false,
     },
-    {
-      title: "Rus Dili",
-      subtitle: "Red Kalinka metodu ilə rus dili",
-      content: [
-        "dərsləri sadə və sistemli yanaşması ilə rus dilini öyrənmək istəyənlər üçün xüsusi olaraq hazırlanmış bir metoddur. Bu metod tələbələrə dili asan və sürətli şəkildə mənimsəməyə kömək edir.",
-        "1. Praktik yanaşma: Red Kalinka metodu dili real həyat situasiyalarında istifadə etməyi öyrədir. Danışıq və dinləmə bacarıqlarına xüsusi önəm verilir, tələbələr gündəlik həyatda rahat ünsiyyət qurmağı öyrənirlər.",
-        "2. Səviyyələr üzrə tədris: Dərslər A1-dən C2-yə qədər müxtəlif səviyyələr üzrə təşkil olunur və hər səviyyədə şagirdlərin bacarıqları mərhələli şəkildə inkişaf etdirilir.",
-        "3. Addım-addım öyrənmə: Hər dərs bir-birinin üzərinə qurulur, bu da tələbələrin yeni bilikləri rahatlıqla mənimsəməsinə və daha möhkəm təməl qurmasına imkan verir.",
-        "4. Audio və vizual materiallar: Dərslərdə səsli materiallar və videolar istifadə olunur, bu da dil öyrənmə prosesini daha maraqlı və interaktiv edir.",
-        "5. İmtahanlara hazırlıq: Red Kalinka metodu, rus dili sertifikatlarına (TRKI) hazırlaşan tələbələr üçün xüsusi proqramlar təklif edir.",
-        "Red Kalinka metodu ilə dərslər, rus dilini öyrənmək üçün ideal seçimdir, çünki praktiki yanaşma və geniş resurslar sayəsində tələbələr dili sürətli və effektiv şəkildə mənimsəyirlər.",
-      ],
-      imageSrc: "/images/about/rusca.jpg",
-      imageAlt: "Rus Dili",
-      reverse: true,
-    },
+   
   ];
 
   return (
@@ -120,7 +121,7 @@ const AboutSectionTwo: React.FC = () => {
                       src={section.imageSrc}
                       alt={section.imageAlt}
                       fill
-                      className="rounded object-cover"
+                      className="rounded-full object-cover"
                     />
                   </div>
                 </div>
