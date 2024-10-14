@@ -13,14 +13,13 @@ const Blog = () => {
   const totalBlogs = blogData.length; // Toplam blog sayısı
   const totalPages = Math.ceil(totalBlogs / blogsPerPage); // Toplam sayfa sayısı
 
-  // Blog verilerini sayfaya göre filtreleme
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = blogData.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const router = useRouter();
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 

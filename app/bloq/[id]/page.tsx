@@ -4,24 +4,45 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import Head from "next/head";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import blogData from "@/components/Blog/blogData";
+
+const BlogContent = ({ content }) => {
+  return (
+    <div>
+      {content.map((part, index) => {
+        if (part.type === "heading") {
+          const HeadingTag = `h${part.level}` as keyof JSX.IntrinsicElements;
+          return (
+            <HeadingTag key={index} className="mb-2 text-lg font-semibold">
+              {part.text}
+            </HeadingTag>
+          );
+        } else if (part.type === "paragraph") {
+          return (
+            <p key={index} className="mb-4">
+              {part.text}
+            </p>
+          );
+        }
+        return null;
+      })}
+    </div>
+  );
+};
 
 const BlogDetailsPage = () => {
   const { id } = useParams();
-  const [hydratedContent, setHydratedContent] = useState<string | null>(null);
 
+  // Blog verisini bulma
   const blog = blogData.find((post) => post.id === Number(id));
 
+  // Blog yoksa hata mesajı döndür
   if (!blog) {
     return <p>Blog tapılmadı</p>;
   }
 
   const { title, paragraph, content, image, author, tags, publishDate } = blog;
-
-  useEffect(() => {
-    setHydratedContent(content);
-  }, [content]);
 
   return (
     <>
@@ -46,8 +67,8 @@ const BlogDetailsPage = () => {
                           <Image
                             src={author.image}
                             alt={author.name}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            className="object-cover"
                           />
                         </div>
                       </div>
@@ -74,20 +95,13 @@ const BlogDetailsPage = () => {
                     <Image
                       src={image}
                       alt={title}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>
 
-                {hydratedContent && (
-                  <div
-                    className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-                    dangerouslySetInnerHTML={{
-                      __html: hydratedContent,
-                    }}
-                  />
-                )}
+                <BlogContent content={content} />
 
                 {/* Sayfanın alt kısmına taglar ve paylaşma bileşenini ekle */}
                 <div className="mt-10 items-center justify-between sm:flex">
