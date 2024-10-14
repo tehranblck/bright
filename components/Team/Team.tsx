@@ -7,22 +7,22 @@ const teamMembers = [
   {
     name: 'Tranter Jaskulski',
     title: 'Founder & Specialist',
-    image: '/images/team/elvira.jpg',
+    image: '/images/blog/Tehran.jpg',
   },
   {
     name: 'Denice Jagna',
     title: 'Tired & M. Specialist',
-    image: '/images/blog/Tehranpng.png',
+    image: '/images/blog/Tehran.jpg',
   },
   {
     name: 'Kenji MiltsSon',
     title: 'Team Member',
-    image: '/images/blog/Tehranpng.png',
+    image: '/images/blog/Tehran.jpg',
   },
   {
     name: 'Tehran Bayramov',
     title: 'Front-end Trainer',
-    image: '/images/blog/Tehranpng.png',
+    image: '/images/blog/Tehran.jpg',
   },
 ];
 
