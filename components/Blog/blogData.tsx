@@ -143,7 +143,7 @@ const blogData: Blog[] = [
     image: "/images/blog/blog-02.jpg",
     author: {
       name: "Nərgiz Allahverdiyeva",
-      image: "/images/blog/author-04.png",
+      image: "/images/blog/author-03.png",
       designation: "Dil Mütəxəssisi, Ingilis dili təlimçisi",
     },
     tags: ["Təhsil", "Öyrənmə metodları", "Dil öyrənmə"],

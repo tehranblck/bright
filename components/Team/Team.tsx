@@ -7,22 +7,22 @@ const teamMembers = [
   {
     name: 'Tranter Jaskulski',
     title: 'Founder & Specialist',
-    image: '/images/blog/Tehran.jpg',
+    image: '/images/team/nergiz.jpg',
   },
   {
-    name: 'Denice Jagna',
-    title: 'Tired & M. Specialist',
-    image: '/images/blog/Tehran.jpg',
+    name: 'Nərmin Cəfərova',
+    title: 'İngilis dili təlimçisi',
+    image: '/images/team/nermin.jpg',
   },
   {
-    name: 'Kenji MiltsSon',
-    title: 'Team Member',
-    image: '/images/blog/Tehran.jpg',
+    name: 'Səbinə Hümbətova',
+    title: 'İngilis dili təlimçisi',
+    image: '/images/team/sebine.jpg',
   },
   {
-    name: 'Tehran Bayramov',
-    title: 'Front-end Trainer',
-    image: '/images/blog/Tehran.jpg',
+    name: 'Sevinc Məmmədova',
+    title: 'İngilis dili təlimçisi',
+    image: '/images/team/sevinc.jpg',
   },
 ];
 
@@ -45,9 +45,9 @@ const Team = () => {
                   <div className="flex flex-col">
                     <a href="#" className="mx-auto">
                       <Image
-                        width={500}
-                        height={500}
-                        className="rounded-full object-cover drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                        width={300}
+                        height={300}
+                        className="rounded-full w-64 h-64 bg-gray-800 object-cover drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
                         src={member.image}
                         alt={`${member.name} - ${member.title}`} // Improved alt text
                       />
