@@ -1,5 +1,5 @@
 {
-  "name": "startup-nextjs-template",
+  "name": "bright-academy",
   "version": "0.2.0",
   "private": true,
   "scripts": {
@@ -16,11 +16,14 @@
     "eslint-config-next": "13.1.6",
     "next": "^13.5.6",
     "next-themes": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-modal-video": "^2.0.0",
-    "styled-components": "^6.1.13"
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13",
+    "swiper": "^6.8.4"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",

@@ -6,6 +6,8 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import Alumni from "@/components/mezunlarimiz/Mezun";
+import Mezun from "@/components/mezunlarimiz/Mezun";
 import Pricing from "@/components/Pricing";
 import Social from "@/components/Social/Social";
 import Team from "@/components/Team/Team";
@@ -28,8 +30,8 @@ export default function Home() {
       <Video />
       <Brands />
       <Team/>
-
       <Testimonials />
+      {/* <Alumni/> */}
       <Blog />
       <Contact />
     </>
