@@ -31,6 +31,7 @@ export default function Home() {
       <Brands />
       <Team/>
       <Testimonials />
+      <Pricing/>
       {/* <Alumni/> */}
       <Blog />
       <Contact />
