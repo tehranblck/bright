@@ -28,10 +28,12 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <WhatsAppMessage/>
         </Providers>
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers";import WhatsAppMessage from "@/components/whatsappMessage/WhatsappMessage";
+
