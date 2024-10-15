@@ -30,7 +30,7 @@ const WhatsAppMessage = () => {
   // WhatsApp bağlantısı oluşturma fonksiyonu
   const sendToWhatsApp = () => {
     const encodedMessage = encodeURIComponent(userMessage);
-    const phoneNumber = "1234567890"; // Buraya kendi telefon numaranızı ekleyin
+    const phoneNumber = "+994997301998"; // Buraya kendi telefon numaranızı ekleyin
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   };
