@@ -89,30 +89,34 @@ const Pricing = () => {
 
         <div className="w-full flex justify-center mb-4">
           {["Dillər", "Front-end"].map((mövzuSeçim) => (
-            <span
+            <button
               key={mövzuSeçim}
               onClick={() => setMövzu(mövzuSeçim)}
               className={`${
-                mövzu === mövzuSeçim ? "text-primary font-bold" : "text-dark"
-              } cursor-pointer mx-2`}
+                mövzu === mövzuSeçim
+                  ? "text-white bg-primary"
+                  : "text-primary bg-gray-200"
+              } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
             >
               {mövzuSeçim}
-            </span>
+            </button>
           ))}
         </div>
 
         {mövzu === "Dillər" && (
           <div className="w-full flex justify-center mb-8">
             {["İngilis", "Rus", "Alman", "Fransız"].map((dilSeçim) => (
-              <span
+              <button
                 key={dilSeçim}
                 onClick={() => setDil(dilSeçim)}
                 className={`${
-                  dil === dilSeçim ? "text-primary font-bold" : "text-dark"
-                } cursor-pointer mx-2`}
+                  dil === dilSeçim
+                    ? "text-white bg-primary"
+                    : "text-primary bg-gray-200"
+                } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
               >
                 {dilSeçim}
-              </span>
+              </button>
             ))}
           </div>
         )}
