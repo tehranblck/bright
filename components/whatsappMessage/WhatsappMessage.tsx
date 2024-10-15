@@ -8,7 +8,7 @@ const WhatsAppMessage = () => {
   const [userMessage, setUserMessage] = useState("");
 
   // Ses elementi oluştur
-  const alertSound =new Audio("/message.mp3") ;
+  const alertSound =!window===undefined?new Audio("/message.mp3"):null ;
   console.log(alertSound)
 
   // Kullanıcı sayfada 2 dakika kalırsa mesajı göster ve ses çal
