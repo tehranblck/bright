@@ -6,20 +6,23 @@ const WhatsAppMessage = () => {
   const [messageVisible, setMessageVisible] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [userMessage, setUserMessage] = useState("");
+  const [alertSound, setAlertSound] = useState<HTMLAudioElement | null>(null);
 
-  // Ses elementi oluştur
-  const alertSound =!window===undefined?new Audio("/message.mp3"):null ;
-  console.log(alertSound)
-
-  // Kullanıcı sayfada 2 dakika kalırsa mesajı göster ve ses çal
   useEffect(() => {
+    // Audio nesnesini yalnızca istemci tarafında oluşturun
+    if (typeof window !== "undefined") {
+      const audio = new Audio("/message.mp3");
+      setAlertSound(audio);
+    }
+
+    // Mesajı gösterme zamanlayıcısı
     const timer = setTimeout(() => {
       setMessageVisible(true);
-        alertSound.play();
+      alertSound?.play();
     }, 3000); // 2 dakika = 120000 milisaniye
 
     return () => clearTimeout(timer); // Temizle
-  }, []);
+  }, [alertSound]);
 
   // Mesajı kapatma fonksiyonu
   const closeMessage = () => {
@@ -35,7 +38,7 @@ const WhatsAppMessage = () => {
   // WhatsApp bağlantısı oluşturma fonksiyonu
   const sendToWhatsApp = () => {
     const encodedMessage = encodeURIComponent(userMessage);
-    const phoneNumber = "+994997301998"; // Buraya kendi telefon numaranızı ekleyin
+    const phoneNumber = "+994997301998"; // Kendi numaranızı buraya ekleyin
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -44,42 +47,51 @@ const WhatsAppMessage = () => {
     <div style={{ position: "absolute", zIndex: "99" }}>
       {/* WhatsApp Benzeri Mesaj Bildirimi */}
       {messageVisible && (
-        <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 flex items-center space-x-4">
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white rounded-lg shadow-lg p-4 flex items-center space-x-4 cursor-pointer"
+             onClick={openForm}>
           <Image
-            src="/whatsapp.png" // WhatsApp ikonunuz
+            src="/whatsapp.png"
             alt="WhatsApp"
             width={30}
             height={30}
             className="rounded-full"
           />
           <div className="text-sm">
-            <p className="font-semibold text-gray-800">WhatsApp</p>
-            <p className="text-gray-600">Salam. Sizə necə kömək edə bilərik?</p>
+            <p className="font-semibold">WhatsApp</p>
+            <p>Salam! Sizə necə kömək edə bilərik?</p>
           </div>
-          <button onClick={openForm} className="ml-auto text-gray-500 hover:text-gray-700">
-            Göndər
-          </button>
         </div>
       )}
 
       {/* Mesaj Formu */}
       {showForm && (
-        <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800">Cavabla</h3>
-          <p className="text-sm text-gray-600">Salam. Sizə necə kömək edə bilərik?</p>
-          <textarea
-            className="w-full p-2 border border-gray-300 rounded-md"
-            placeholder="Mesajınızı yazın..."
-            value={userMessage}
-            onChange={(e) => setUserMessage(e.target.value)}
-          ></textarea>
-          <div className="flex justify-end space-x-2">
-            <button onClick={closeMessage} className="text-gray-500 hover:text-gray-700">
-              Bağla
-            </button>
-            <button onClick={sendToWhatsApp} className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
-              Göndər
-            </button>
+        <div className="fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg w-80">
+          <div className="flex items-center bg-green-600 text-white rounded-t-lg px-4 py-2">
+            <Image
+              src="/whatsapp.png"
+              alt="WhatsApp"
+              width={24}
+              height={24}
+              className="rounded-full"
+            />
+            <p className="ml-2 font-semibold">WhatsApp Support</p>
+            <button onClick={closeMessage} className="ml-auto text-white font-bold">×</button>
+          </div>
+          <div className="p-4">
+            <div className="bg-gray-100 text-gray-800 rounded-lg p-3 mb-4">
+              Salam! Sizə necə kömək edə bilərik?
+            </div>
+            <textarea
+              className="w-full p-2 border border-gray-300 rounded-lg"
+              placeholder="Mesajınızı yazın..."
+              value={userMessage}
+              onChange={(e) => setUserMessage(e.target.value)}
+            ></textarea>
+            <div className="flex justify-end space-x-2 mt-2">
+              <button onClick={sendToWhatsApp} className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                Göndər
+              </button>
+            </div>
           </div>
         </div>
       )}
