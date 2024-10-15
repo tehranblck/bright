@@ -7,10 +7,15 @@ const WhatsAppMessage = () => {
   const [showForm, setShowForm] = useState(false);
   const [userMessage, setUserMessage] = useState("");
 
-  // Kullanıcı sayfada 2 dakika kalırsa mesajı göster
+  // Ses elementi oluştur
+  const alertSound =new Audio("/message.mp3") ;
+  console.log(alertSound)
+
+  // Kullanıcı sayfada 2 dakika kalırsa mesajı göster ve ses çal
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessageVisible(true);
+        alertSound.play();
     }, 3000); // 2 dakika = 120000 milisaniye
 
     return () => clearTimeout(timer); // Temizle
@@ -36,7 +41,7 @@ const WhatsAppMessage = () => {
   };
 
   return (
-    <div style={{position:'absolute',zIndex:'99'}}>
+    <div style={{ position: "absolute", zIndex: "99" }}>
       {/* WhatsApp Benzeri Mesaj Bildirimi */}
       {messageVisible && (
         <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 flex items-center space-x-4">
@@ -49,10 +54,10 @@ const WhatsAppMessage = () => {
           />
           <div className="text-sm">
             <p className="font-semibold text-gray-800">WhatsApp</p>
-            <p className="text-gray-600">Merhaba! Size nasıl yardımcı olabilirim?</p>
+            <p className="text-gray-600">Salam. Sizə necə kömək edə bilərik?</p>
           </div>
           <button onClick={openForm} className="ml-auto text-gray-500 hover:text-gray-700">
-            Yanıtla
+            Göndər
           </button>
         </div>
       )}
@@ -60,8 +65,8 @@ const WhatsAppMessage = () => {
       {/* Mesaj Formu */}
       {showForm && (
         <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 space-y-4">
-          <h3 className="text-lg font-semibold text-gray-800">Yanıtla</h3>
-          <p className="text-sm text-gray-600">Merhaba! Size nasıl yardımcı olabilirim?</p>
+          <h3 className="text-lg font-semibold text-gray-800">Cavabla</h3>
+          <p className="text-sm text-gray-600">Salam. Sizə necə kömək edə bilərik?</p>
           <textarea
             className="w-full p-2 border border-gray-300 rounded-md"
             placeholder="Mesajınızı yazın..."
@@ -70,10 +75,10 @@ const WhatsAppMessage = () => {
           ></textarea>
           <div className="flex justify-end space-x-2">
             <button onClick={closeMessage} className="text-gray-500 hover:text-gray-700">
-              Kapat
+              Bağla
             </button>
             <button onClick={sendToWhatsApp} className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
-              Gönder
+              Göndər
             </button>
           </div>
         </div>
