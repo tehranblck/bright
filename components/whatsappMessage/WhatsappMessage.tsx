@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
+import './style.css'
 
 const WhatsAppMessage = () => {
   const [messageVisible, setMessageVisible] = useState(false);
@@ -10,14 +11,13 @@ const WhatsAppMessage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessageVisible(true);
-    }, 45000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const closeMessage = useCallback(() => {
-    setMessageVisible(false);
-    setShowForm(false)
+    setShowForm(false);
   }, []);
 
   const openForm = useCallback(() => {
@@ -36,10 +36,10 @@ const WhatsAppMessage = () => {
     <div className="fixed max-w-md container mx-auto bottom-4 right-4 z-50">
       {messageVisible && (
         <div
-          className="bg-green-500 text-white rounded-lg shadow-lg p-4 flex items-center space-x-4 cursor-pointer"
+          className="bg-[#232323]  text-white rounded-lg shadow-lg p-4 flex items-center space-x-4 cursor-pointer bounce"
           onClick={openForm}
         >
-          <Image src="/whatsapp.png" alt="WhatsApp" width={30} height={30} className="rounded-full" />
+          <Image src="/whatsapp.png" alt="WhatsApp" width={70} height={70} className="rounded-full" />
           <div className="text-sm">
             <p className="font-semibold">WhatsApp</p>
             <p>Salam! Sizə necə kömək edə bilərik?</p>
@@ -51,7 +51,7 @@ const WhatsAppMessage = () => {
         <div className="bg-white border border-gray-200 rounded-lg shadow-lg w-80">
           <div className="flex items-center bg-green-600 text-white rounded-t-lg px-4 py-2">
             <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="rounded-full" />
-            <p className="ml-2 font-semibold">WhatsApp </p>
+            <p className="ml-2 font-semibold">WhatsApp</p>
             <button onClick={closeMessage} className="ml-auto font-bold">×</button>
           </div>
           <div className="p-4">
