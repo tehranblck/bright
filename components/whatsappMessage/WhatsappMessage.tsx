@@ -10,13 +10,14 @@ const WhatsAppMessage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessageVisible(true);
-    }, 3000);
+    }, 45000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const closeMessage = useCallback(() => {
     setMessageVisible(false);
+    setShowForm(false)
   }, []);
 
   const openForm = useCallback(() => {
