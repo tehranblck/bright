@@ -32,7 +32,7 @@ const WhatsAppMessage = () => {
   }, [userMessage]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed max-w-md container mx-auto bottom-4 right-4 z-50">
       {messageVisible && (
         <div
           className="bg-green-500 text-white rounded-lg shadow-lg p-4 flex items-center space-x-4 cursor-pointer"
@@ -50,7 +50,7 @@ const WhatsAppMessage = () => {
         <div className="bg-white border border-gray-200 rounded-lg shadow-lg w-80">
           <div className="flex items-center bg-green-600 text-white rounded-t-lg px-4 py-2">
             <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="rounded-full" />
-            <p className="ml-2 font-semibold">WhatsApp Support</p>
+            <p className="ml-2 font-semibold">WhatsApp </p>
             <button onClick={closeMessage} className="ml-auto font-bold">×</button>
           </div>
           <div className="p-4">
