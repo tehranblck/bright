@@ -23,6 +23,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         <Image
           src={image}
           alt={title}
+          quality={95}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw" // Responsive için boyutlandırma

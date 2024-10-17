@@ -70,90 +70,55 @@ const blogData: Blog[] = [
 
 
   {
-    id: 2,
-    title: "Effektiv Dil Öyrənmə Metodları: 7 Təcrübə ilə Təhsilinizə Dəstək",
+    id: 3,
+    title: "Fransız Dilini Öyrənmək: Mədəniyyətlə Dili Kəşf Edin",
     paragraph:
-      "Dil öyrənmək hər kəs üçün fərqli təcrübədir və hər kəsin öyrənmə tərzi müxtəlifdir. Lakin, dil öyrənmə prosesini asanlaşdıran bir neçə effektiv üsul var.",
+      "Fransız dilini öyrənmək, təkcə sözlərdən ibarət deyil, həm də yeni bir dünyanın qapılarını açmaqdır. Fransız dili təlimçisi Günel İsmayılova, tələbələrinə bu dilin incəliklərini və mədəni zənginliklərini tanıdaraq unikal bir öyrənmə təcrübəsi təqdim edir.",
     content: [
       {
         type: "paragraph",
-        text: "Dil öyrənməyin müxtəlif yolları var və hər bir insanın öyrənmə tərzi fərqlidir. Ancaq bəzi effektiv üsullar bu prosesi asanlaşdırır və daha məhsuldar edir. Bu yazıda öyrənmə prosesinizə dəstək olacaq 7 metodu təqdim edirik.",
+        text: "Azərbaycan Dövlət Pedaqoji Universitetindən məzun olmuş və 2019-cu ildən pedaqoji fəaliyyətə başlamış Günel İsmayılova, 2021-ci ildən bəri Bright Academy-də Fransız dili təlimçisi olaraq çalışır. Dərs metodları ilə dilin səslərinin incəliyini və melodiyasını göstərərək, tələbələrinin fransız dilinə sevgi və maraqla yanaşmasını təmin edir."
       },
       {
         type: "heading",
         level: 3,
-        text: "1. Müntəzəm Təkrarlar ilə yaddaşı gücləndirin",
+        text: "1. Fransız Dilini Öyrənməyin Mədəniyyətlə Bağlantısı"
       },
       {
         type: "paragraph",
-        text: "Hər gün öyrəndiyiniz sözləri təkrar etmək, yaddaşınızı gücləndirir. Dil tətbiqləri və kartlar vasitəsilə öyrəndiyiniz sözləri təkrarlayın.",
+        text: "Günel İsmayılova, fransız dilini qaydalar üzərindən deyil, mədəniyyətlə öyrətməyə inanır. Tələbələrinə Fransanın ədəbiyyatından, incəsənətindən və həyat tərzindən bəhs edərək onları fərqli bir mədəniyyətə səyahətə çıxarır. Bu metod, öyrənmə prosesini daha maraqlı və canlı edir."
       },
       {
         type: "heading",
         level: 3,
-        text: "2. Mobil Tətbiqlərdən Yararlanın",
+        text: "2. Tələbələrə Yeni Bir Dünyanın Qapılarını Açmaq"
       },
       {
         type: "paragraph",
-        text: "Duolingo, Memrise kimi tətbiqlər vasitəsilə öyrənmə prosesini əyləncəli hala gətirin. Bu tətbiqlər hər zaman əlinizin altında ola bilər.",
+        text: "Fransız dilini öyrətmək, yalnız bir dil tədris etmək deyil, həm də tələbələrə yeni bir dünyanı tanıtmaqdır. Bu dilin melodik səsləri və ifadə zənginliyi, tələbələr üçün yeni bir mədəniyyəti dərindən anlamaq imkanı yaradır."
       },
       {
         type: "heading",
         level: 3,
-        text: "3. Filmlər və Musiqilərlə Dili Gündəlik Həyatınıza Daxil Edin",
+        text: "3. Mədəniyyəti Dərindən Hiss Edərək Dil Öyrənmək"
       },
       {
         type: "paragraph",
-        text: "Sevdiyiniz filmləri və mahnıları yeni dildə izləyərək öyrənmə prosesini sürətləndirə bilərsiniz. Bununla yanaşı, dili gündəlik həyatda istifadə etmə şansını da artırırsınız.",
-      },
-      {
-        type: "heading",
-        level: 3,
-        text: "4. Dostlarla və ya Dil Partnyorları ilə Öyrənmə",
-      },
-      {
-        type: "paragraph",
-        text: "Birlikdə öyrənmək motivasiyanı artırır. Təcrübənizi zənginləşdirmək üçün dil mübadiləsi partnyorları ilə öyrənmə əladır.",
-      },
-      {
-        type: "heading",
-        level: 3,
-        text: "5. Danışığa Fokuslanın",
-      },
-      {
-        type: "paragraph",
-        text: "Hədəf dilinizi daha yaxşı danışa bilmək üçün mümkün qədər çox praktik edin. Real həyatda istifadə etdikcə dil qabiliyyətiniz də artacaq.",
-      },
-      {
-        type: "heading",
-        level: 3,
-        text: "6. Kiçik Hədəflərlə Başlayın",
-      },
-      {
-        type: "paragraph",
-        text: "Hər gün üçün kiçik və konkret hədəflər qoymaq dil öyrənmənin asanlaşdırılmasına kömək edir. Məsələn, hər gün 5 yeni söz öyrənmək.",
-      },
-      {
-        type: "heading",
-        level: 3,
-        text: "7. Tədris Materiallarından Yararlanın",
-      },
-      {
-        type: "paragraph",
-        text: "Yüksək keyfiyyətli tədris materialları seçərək dil öyrənmə prosesini daha effektiv edə bilərsiniz. Kitablar, iş vərəqləri və onlayn dərsliklər bu işdə faydalıdır.",
-      },
+        text: "Günel İsmayılova, hər kəsi fransız dilini sevərək və mədəniyyəti dərindən hiss edərək öyrənməyə dəvət edir. Dili sevdirmək və öyrənməni daha maraqlı hala gətirmək üçün Fransanın klassik və müasir ədəbiyyatından nümunələr və maraqlı hekayələr danışır."
+      }
     ],
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/blog/french_language.jpg",
     author: {
-      name: "Nərgiz Allahverdiyeva",
-      image: "/images/blog/author-03.png",
-      designation: "Dil Mütəxəssisi, Ingilis dili təlimçisi",
+      name: "Günel İsmayılova",
+      image: "/images/team/gunel_ismayilova.jpg",
+      designation: "Fransız dili təlimçisi",
     },
-    tags: ["Təhsil", "Öyrənmə metodları", "Dil öyrənmə"],
-    publishDate: "2024-10-01",
+    tags: ["Fransız dili", "Mədəniyyət", "Dil öyrənmə"],
+    publishDate: "2024-10-17",
   },
+
   {
-    id: 3,
+    id: 4,
     title: "React ilə Web Tətbiqi Yaratma: Addım-addım Bələdçi",
     paragraph:
       "Bu bələdçi ilə React kitabxanası istifadə edərək öz web tətbiqinizi yaratmağı öyrənəcəksiniz.",
@@ -483,6 +448,54 @@ const blogData: Blog[] = [
     tags: ["Performans", "Web Tətbiqi", "Optimizasiya"],
     publishDate: "2024-02-14",
   },
+  {
+    id: 4,
+    title: "Dil Sevgisini Aşılamaq: Müasir İngilis Dili Müəllimi ilə Tanış Olun",
+    paragraph:
+      "Dil öyrənmə prosesini sevgi və maraqla əlaqələndirərək, tələbələrinə qavrayışını artıran, yenilikçi metodlar tətbiq edən bir ingilis dili müəllimi ilə tanış olun.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Azərbaycan Dillər Universitetində ingilis dili və ədəbiyyatı müəllimliyi ixtisası üzrə təhsil almışam. Hazırda Bright Academy-də ingilis dili təlimçisi olaraq fəaliyyət göstərirəm və tələbələrimdə dil sevgisini yaratmağa çalışıram. Müxtəlif öyrənmə üslublarını nəzərə alaraq dərslərimi uyğunlaşdırır, maraqlı dərs planları hazırlayıram."
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "1. Tələbə Mərkəzli Tədris Yanaşması"
+      },
+      {
+        type: "paragraph",
+        text: "Hər bir tələbənin fərqli öyrənmə üslubuna və qabiliyyətinə hörmətlə yanaşıram. Dərslərimdə innovativ tədris metodları tətbiq edərək tələbələrin qavrayışını və nəticələrini artırmaq üçün əlimdən gələni edirəm."
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "2. İnklüziv Sinif Mühiti"
+      },
+      {
+        type: "paragraph",
+        text: "Ünsiyyət bacarıqlarım və müsbət yanaşmam sayəsində tələbələrimlə yanaşı həmkarlarım və valideynlər ilə də sıx əməkdaşlıq qururam. Tənqidi düşüncə və yaradıcılığı təşviq edən, hər kəs üçün açıq və təhlükəsiz sinif mühiti yaratmağa çalışıram."
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "3. Peşəkar İnkişaf"
+      },
+      {
+        type: "paragraph",
+        text: "Peşəkar tədris bacarıqlarımı inkişaf etdirmək üçün TESOL və TKT kimi beynəlxalq sertifikatlar əldə etmişəm. Hər bir sertifikatı uğurla başa vuraraq tələbələrimə daha keyfiyyətli dərslər təqdim etmək üçün davamlı olaraq öyrənməyə davam edirəm."
+      }
+    ],
+    image: "/images/blog/english_teacher.jpg",
+    author: {
+      name: "Allahverdiyeva Nərgiz",
+      image: "/images/team/allahverdiyeva_nergiz.jpg",
+      designation: "İngilis dili müəllimi",
+    },
+    tags: ["İngilis dili", "Tədris", "Dil öyrənmə"],
+    publishDate: "2024-10-18",
+  },
+
 ];
 
 export default blogData;
