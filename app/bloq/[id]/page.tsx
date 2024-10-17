@@ -68,13 +68,13 @@ const BlogDetailsPage = () => {
                             src={author.image}
                             alt={author.name}
                             fill
-                            className="object-cover"
+                            className="object-cover "
                           />
                         </div>
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
-                          By <span>{author.name}</span>
+                          Yazan <span>{author.name}</span>
                         </span>
                       </div>
                     </div>
@@ -91,10 +91,12 @@ const BlogDetailsPage = () => {
                   </div>
                 </div>
                 <div className="mb-10 w-full overflow-hidden rounded">
-                  <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
+                  <div className="relative h-[450px] aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
                       src={image}
                       alt={title}
+                      quality={95}
+                      priority
                       fill
                       className="object-cover"
                     />
@@ -107,7 +109,7 @@ const BlogDetailsPage = () => {
                 <div className="mt-10 items-center justify-between sm:flex">
                   <div className="mb-5">
                     <h4 className="mb-3 text-sm font-medium text-body-color">
-                      Popular Tags:
+                      Bənzər etiketlər
                     </h4>
                     <div className="flex items-center">
                       {tags.map((tag, index) => (
@@ -117,7 +119,7 @@ const BlogDetailsPage = () => {
                   </div>
                   <div className="mb-5">
                     <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-                      Share this post:
+                      Postu sosial mediada paylaş.
                     </h5>
                     <div className="flex items-center sm:justify-end">
                       <SharePost />

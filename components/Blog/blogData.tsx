@@ -1,71 +1,74 @@
 import { Blog } from "@/types/blog";
 
+
 const blogData: Blog[] = [
   {
-    id: 1,
-    title: "Yeni Bir Dil Öyrənməyin 5 Faydası və Həyatınıza Təsirləri",
+    id: 2,
+    title: "Niyə Alman Dilini Öyrənməlisiniz? Alman Dilinin Əhəmiyyəti və Faydaları",
     paragraph:
-      "Yeni bir dil öyrənmək həyatınızda müxtəlif müsbət təsirlər yarada bilər. Öyrəndiyiniz dil nə olursa olsun, dil biliklərinin artırılması sizi həm şəxsi, həm də peşəkar həyatda irəli aparacaq.",
+      "Alman dili, Avropanın ən geniş danışılan dillərindən biri olaraq, iş və şəxsi həyatda çoxsaylı üstünlüklər təqdim edir. Alman dilini öyrənməklə həm dünya ədəbiyyatına, həm də qlobal iş imkanlarına qapı aça bilərsiniz.",
     content: [
       {
         type: "paragraph",
-        text: "Dil öyrənmək, hər kəsin həyatında böyük təsir yarada biləcək güclü bir bacarıqdır. Yeni bir dil öyrənməyin faydaları sadəcə iş imkanları ilə məhdudlaşmır, eyni zamanda beynin inkişafı, mədəniyyətləri daha yaxından tanıma, sosial həyat və fərdi inkişafa da təsir edir.",
+        text: "Xarici dil öyrənmək, özəlliklə alman dilini öyrənmək, yeni mədəniyyətləri və iş imkanlarını kəşf etmək üçün möhtəşəm bir fürsətdir. Bu, sizə geniş karyera imkanları, yeni dostluqlar və fərdi inkişaf təmin edir.",
       },
       {
         type: "heading",
         level: 3,
-        text: "1. Beyin Sağlamlığını Gücləndirir",
+        text: "1. Alman Dili Avropada Ən Geniş Danışılan Dildir",
       },
       {
         type: "paragraph",
-        text: "Bir neçə dili eyni anda öyrənmək beyini daim aktiv saxlayır və yaddaşı gücləndirir. Beyin üçün yeni sözlər öyrənmək, fərqli dillərdə danışmaq və düşünmək əla bir məşqdir.",
+        text: "Avropada 100 milyondan çox insanın ana dili olan alman dili, Belçika, İsveçrə, Avstriya kimi ölkələrdə də geniş yayılmışdır. Bu da alman dilini öyrənənlərə Avropada və dünyada çoxsaylı iş və təhsil imkanları yaradır.",
       },
       {
         type: "heading",
         level: 3,
-        text: "2. Yeni İş İmkanları Yaratmaq",
+        text: "2. Dünya Ədəbiyyatını Orijinal Dildə Oxumaq İmkanı",
       },
       {
         type: "paragraph",
-        text: "Dil bilikləri çoxdilli bir iş mühitində üstünlük verir. Bu, sizi rəqiblərdən bir addım irəli aparır və karyeranızda yeni üfüqlər açır.",
+        text: "Alman dilində təhsil almaqla, Höte, Qrimm qardaşları, Tomas Mann kimi ədəbiyyat klassiklərini və Nobel mükafatı laureatlarının əsərlərini tərcüməsiz oxuma imkanı əldə edirsiniz.",
       },
       {
         type: "heading",
         level: 3,
-        text: "3. Özünə İnamı Artırmaq",
+        text: "3. İş İmkanlarını Genişləndirmək",
       },
       {
         type: "paragraph",
-        text: "Yeni bir dili öyrəndikcə, özünüzə daha çox güvənirsiniz. Yeni insanlarla ünsiyyət qurmaq, səyahət etmək və fərqli mədəniyyətləri başa düşmək daha asanlaşır.",
+        text: "Alman dili öyrənənlər üçün Almaniyanın iş bazarına, həmçinin Avropada çoxdilli iş mühitlərində üstünlüklər təqdim edir. Bu, karyeranızı inkişaf etdirmək və global əmək bazarında rəqabət gücünüzü artırmaq deməkdir.",
       },
       {
         type: "heading",
         level: 3,
-        text: "4. Fərqli Mədəniyyətləri Tanımaq",
+        text: "4. Yeni Dostluqlar və Mədəniyyətlər Kəşf Etmək",
       },
       {
         type: "paragraph",
-        text: "Dil öyrənmək, həmin dilin mənsublarının mədəniyyətinə də yaxınlaşmaq deməkdir. Kitablar, filmlər və musiqilər vasitəsilə o mədəniyyəti daha yaxşı tanımaq mümkündür.",
+        text: "Alman dili ilə səyahətlərinizdə və işgüzar səfərlərinizdə müxtəlif ölkələrdəki insanlarla ünsiyyət qurmaq və onların mədəniyyətini öyrənmək imkanınız olur.",
       },
       {
         type: "heading",
         level: 3,
-        text: "5. Zehni Sərhədləri Genişləndirmək",
+        text: "5. Asan Tələffüz və Yazıya Sadiq Qayda Sistemi",
       },
       {
         type: "paragraph",
-        text: "Yeni dillər öyrənmək beyninizi elastik saxlayır və müxtəlif problemlərin öhdəsindən daha yaxşı gəlməyə kömək edir.",
+        text: "Alman dilinin tələffüzü yazıya uyğun gəldiyindən öyrənilməsi nisbətən asandır. Bu da dil öyrənərkən daha az çətinlik çəkməyinizə və daha sürətli irəliləmənizə kömək edir.",
       },
     ],
-    image: "/images/blog/learn_lang.jpg",
+    image: "/images/blog/german.avif",
     author: {
-      name: "Elvira Ocaqquliyeva",
-      image: "/images/blog/elvira.jpg",
-      designation: "Rus dili təlimçisi",
+      name: " Səbinə Məhərrəmova",
+      image: "/images/team/sebine_meherremova.jpg",
+      designation: "Alman dili təlimçisi",
     },
-    tags: ["Xarici dil", "Dil öyrənmə", "Peşəkar inkişaf"],
-    publishDate: "2024-05-19",
+    tags: ["Alman dili", "Xarici dil", "Dil öyrənmə"],
+    publishDate: "2024-10-16",
   },
+
+
   {
     id: 2,
     title: "Effektiv Dil Öyrənmə Metodları: 7 Təcrübə ilə Təhsilinizə Dəstək",
