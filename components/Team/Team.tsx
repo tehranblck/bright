@@ -48,7 +48,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
                       />
                     </Link>
                     <div className="text-center mt-6">
-                      <h1 className="text-white text-xl font-bold mb-1">{member.name}</h1>
+                      <h1 className=" text-xl dark:text-white text-black font-bold mb-1">{member.name}</h1>
                       <div className="text-gray-700 font-light mb-2">{member.title}</div>
 
                       {/* Show more button to open the modal */}
