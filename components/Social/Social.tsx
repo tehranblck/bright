@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Social = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapperrr>
       <div className="card">
         <Link className="socialContainer containerOne" href="#">
           <svg viewBox="0 0 16 16" className="socialSvg instagramSvg">
@@ -31,11 +31,11 @@ const Social = () => {
           </svg>
         </Link>
       </div>
-    </StyledWrapper>
+    </StyledWrapperrr>
   );
 };
 
-const StyledWrapper = styled.div`
+const StyledWrapperrr = styled.div`
   .card {
     width: fit-content;
     height: fit-content;
