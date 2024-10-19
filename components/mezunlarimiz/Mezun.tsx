@@ -1,16 +1,14 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { alumniData } from './MezunData';
+import Image from 'next/image';
 
-// Swiper-in müştəri tərəfində render olunması üçün dinamik idxalı
-const Swiper = dynamic(() => import('swiper/react').then((mod) => mod.Swiper), { ssr: true });
+// Swiper bileşenlerini dinamik olarak client-side yükleme
+const Swiper = dynamic(() => import('swiper/react').then((mod) => mod.Swiper), { ssr: false });
 const SwiperSlide = dynamic(() => import('swiper/react').then((mod) => mod.SwiperSlide), { ssr: false });
-
-
 
 const Alumni = () => {
   const settings = {
@@ -36,13 +34,7 @@ const Alumni = () => {
           {alumniData.map((alumni, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6">
-                <Image
-                  src={alumni.image}
-                  alt={alumni.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full object-cover mb-4"
-                />
+                <Image src={alumni.image} alt='mezun dil kursu' width={150} height={150} className="rounded-full object-cover mb-4"/>
                 <h3 className="text-xl font-semibold">{alumni.name}</h3>
                 <p className="text-gray-600 text-sm mt-2 text-center">{alumni.description}</p>
               </div>
