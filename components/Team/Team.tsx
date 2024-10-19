@@ -53,7 +53,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
 
                       {/* Show more button to open the modal */}
                       <ButtonTeam
-                      textColor='white'
+                      
                         onClick={() => openModal(index)}
                         text="Daha Çox Göstər"
                        
@@ -69,7 +69,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
                         <h2 className="text-2xl  font-bold mb-4 text-black : dark:text-gray-200">{member.name}</h2>
                         <p className="text-gray-700 dark:text-white mb-4">{member.about}</p>
                         <ButtonTeam
-                        textColor='white'
+                       
                           onClick={closeModal}
                           text="Bağla"
                         
@@ -84,7 +84,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
             {loadmore && (
               <div className="flex justify-center mt-6">
                 <ButtonTeam
-                textColor='black'
+               
                   onClick={() => setShowModal(null)}
                   text="Daha Az Göstər"
               

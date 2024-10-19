@@ -4,18 +4,16 @@ import styled from "styled-components";
 interface ButtonTeamProps {
   onClick: () => void; 
   text: string; 
-  textColor?: string;
-  backgroundColor?: string;
+
 }
 
 const ButtonTeam: React.FC<ButtonTeamProps> = ({
   onClick,
   text,
-  textColor = "#fff", // Varsayılan beyaz renk
-  backgroundColor = "#3654ff", // Varsayılan mavi renk
+
 }) => {
   return (
-    <StyledWrapper onClick={onClick} textColor={textColor} backgroundColor={backgroundColor}>
+    <StyledWrapper onClick={onClick} >
       <button className="button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,14 +36,12 @@ const ButtonTeam: React.FC<ButtonTeamProps> = ({
   );
 };
 
-const StyledWrapper = styled.div<{ textColor: string; backgroundColor: string }>`
+const StyledWrapper = styled.div`
   .button {
     background-color: transparent;
-    color: ${({ textColor }) => textColor};
     min-width: 4rem;
     padding: 10px 15px;
     height: 2.9em;
-    border: ${({ backgroundColor }) => backgroundColor} 0.2em solid;
     border-radius: 11px;
     display: flex;
     align-items: center;
@@ -54,7 +50,6 @@ const StyledWrapper = styled.div<{ textColor: string; backgroundColor: string }>
   }
 
   .button:hover {
-    background-color: ${({ backgroundColor }) => backgroundColor};
     color: #fff;
     cursor: pointer;
   }
@@ -63,7 +58,6 @@ const StyledWrapper = styled.div<{ textColor: string; backgroundColor: string }>
     width: 1.6em;
     margin-right: 0.8em;
     transition: all 0.4s ease;
-    color: ${({ textColor }) => textColor};
   }
 
   .button:hover svg {
@@ -72,7 +66,6 @@ const StyledWrapper = styled.div<{ textColor: string; backgroundColor: string }>
   }
 
   .text {
-    color: ${({ textColor }) => textColor};
   }
 
   .button:hover .text {
