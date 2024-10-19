@@ -18,13 +18,12 @@ const ButtonTeam: React.FC<ButtonTeamProps> = ({
     <StyledWrapper onClick={onClick} textColor={textColor} backgroundColor={backgroundColor}>
       <button className="button">
         <svg
-          style={{ color: `${textColor}` }}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-6 h-6 text-black bg-black rounded-lg dark:text-white bg-dark-mode:text-black"
         >
           <path
             strokeLinecap="round"
@@ -33,14 +32,12 @@ const ButtonTeam: React.FC<ButtonTeamProps> = ({
           />
         </svg>
 
-        {/* Dinamik textColor uygulandı */}
-        <div className="text">{text}</div>
+        <div className="text-black dark:text-white bg-dark-mode:text-black">{text}</div>
       </button>
     </StyledWrapper>
   );
 };
 
-// Styled-components'de dinamik prop üzerinden renk ve arkaplan rengi uygulandı
 const StyledWrapper = styled.div<{ textColor: string; backgroundColor: string }>`
   .button {
     background-color: transparent;

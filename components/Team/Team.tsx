@@ -63,13 +63,13 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
 
                   {/* Popup modal */}
                   {showModal === index && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                      <div className="bg-white rounded-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+                    <div className="fixed inset-0  bg-black bg-opacity-50 flex items-center justify-center z-50">
+                      <div className="dark:bg-[#232323] bg-white rounded-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
                        
-                        <h2 className="text-2xl font-bold mb-4 text-black">{member.name}</h2>
-                        <p className="text-gray-700 mb-4">{member.about}</p>
+                        <h2 className="text-2xl  font-bold mb-4 text-black : dark:text-gray-200">{member.name}</h2>
+                        <p className="text-gray-700 dark:text-white mb-4">{member.about}</p>
                         <ButtonTeam
-                        textColor='black'
+                        textColor='white'
                           onClick={closeModal}
                           text="Bağla"
                         
