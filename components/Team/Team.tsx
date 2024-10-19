@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { teamMembers } from './teamData';
 import Link from 'next/link';
-import ButtonTeam from './ButtonTeam'; // Düzeltilmiş ButtonTeam bileşeni
+import ButtonTeam from './ButtonTeam'; 
+import { usePathname } from 'next/navigation';
+
 
 interface TeamProps {
   loadmore: boolean;
@@ -13,6 +15,14 @@ interface TeamProps {
 const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
   const [showModal, setShowModal] = useState<number | null>(null);
   const [visible,setVisible]=useState<boolean>(false)
+  const path=usePathname();
+  console.log(path)
+
+  useEffect(()=>{
+    if(path==='/heyyet'){
+      setVisible(true)
+    }
+  },[])
 
   const openModal = (index: number) => {
     setShowModal(index); 
@@ -22,6 +32,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
     setShowModal(null); 
   };
 
+const DisplayMembers=visible?teamMembers:teamMembers.slice(0,4)
   return (
     <div className="flex items-center justify-center min-h-screen bg-transparent py-36">
       <div className="flex flex-col">
@@ -35,7 +46,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
             </div>
 
             <div className="flex flex-wrap">
-              {teamMembers.map((member, index) => (
+              {DisplayMembers.map((member, index) => (
                 <div key={index} className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
                   <div className="flex flex-col">
                     <Link href="#" className="mx-auto">
@@ -86,7 +97,11 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
                 {loadmore && (
               <div className="flex justify-center mt-6">
                 <button
-                  onClick={() => setVisible(!visible)} >{visible ? "Daha Az Göstər" : "Daha Çox Göstər"}</button>
+                  onClick={() => setVisible(!visible)} // Butonun durumu visible state’ine göre değişir
+                  className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
+                >
+                  {visible ? "Daha Az Göstər" : "Daha Çox Göstər"}
+                </button>
               </div>
             )}
           </div>
