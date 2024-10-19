@@ -1,36 +1,8 @@
-import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { testimonialData } from "./testimonialData";
 
-const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Aysel Həsənova",
-    designation: "Dil Öyrənmə Mərkəzi tələbəsi",
-    content:
-      "Bu kurs mənim dil öyrənmə bacarıqlarımı inanılmaz dərəcədə inkişaf etdirdi. Müəllimlər çox peşəkar və dəstəkçidir. Məşğələlər çox maraqlı və motivasiyaedici keçdi.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
-    name: "Elvin Məmmədov",
-    designation: "Xarici Dillər üzrə Tələbə",
-    content:
-      "Dil kursu öyrənmə prosesini mənim üçün asan və əyləncəli etdi. Müəllimlər hər zaman suallarımı cavablandırmağa hazır idilər. Həqiqətən də, burada özümü rahat hiss edirəm.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Nigar Əliyeva",
-    designation: "İş Adamı",
-    content:
-      "İş məqsədlərim üçün dil öyrənmək istəyirdim və bu kurs mənə çox kömək etdi. Kurs materialları çox keyfiyyətlidir və dərslər çox peşəkar şəkildə keçirilir.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
-  },
-];
+
 
 const Testimonials = () => {
   return (
