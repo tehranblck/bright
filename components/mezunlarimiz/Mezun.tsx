@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import { alumniData } from './MezunData';
 
 // Swiper-in müştəri tərəfində render olunması üçün dinamik idxalı
-const Swiper = dynamic(() => import('swiper/react').then((mod) => mod.Swiper), { ssr: false });
+const Swiper = dynamic(() => import('swiper/react').then((mod) => mod.Swiper), { ssr: true });
 const SwiperSlide = dynamic(() => import('swiper/react').then((mod) => mod.SwiperSlide), { ssr: false });
 
 
