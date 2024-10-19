@@ -86,10 +86,7 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
                 {loadmore && (
               <div className="flex justify-center mt-6">
                 <button
-                  textColor='black'
-                  onClick={() => setVisible(!visible)} 
-                  text={visible ? "Daha Az Göstər" : "Daha Çox Göstər"}
-                />
+                  onClick={() => setVisible(!visible)} >{visible ? "Daha Az Göstər" : "Daha Çox Göstər"}</button>
               </div>
             )}
           </div>

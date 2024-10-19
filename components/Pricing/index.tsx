@@ -61,7 +61,7 @@ const Pricing = () => {
     if (!mövcudDillər.includes(dil)) {
       setDil(mövcudDillər[0]);
     }
-  }, [mövzu, dil]);
+  }, [mövzu, dil,qiymetSeçimləri]);
 
   // Qiymət məlumatlarını almaq üçün funksiya
   const qiymetAl = (müddət: string, indeks: number) => {
