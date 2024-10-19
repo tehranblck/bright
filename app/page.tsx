@@ -24,9 +24,9 @@ export default function Home() {
       <Hero />
       <AboutSectionOne />
       <Features />
-      <Video />
+      {/* <Video /> */}
       <Brands />
-      <Team/>
+      <Team textParagraph='Müəllim hərşeydir.' loadmore={true}/>
       <Testimonials />
       <Pricing/>
       {/* <Alumni/> */}

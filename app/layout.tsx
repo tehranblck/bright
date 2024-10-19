@@ -25,10 +25,13 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
-          {children}
+         <div className="min-h-screen">
+         {children}
+         </div>
           <Footer />
           {/* <ScrollToTop /> */}
           <WhatsAppMessage/>
+          {/* <Card/> */}
         </Providers>
       </body>
     </html>
@@ -36,4 +39,5 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";import WhatsAppMessage from "@/components/whatsappMessage/WhatsappMessage";
+import Card from "@/components/whatsappMessage/MessageLittle";
 

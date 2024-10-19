@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import Loader from "./Cubic";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -51,7 +52,7 @@ Məqsədimiz müxtəlif dillər üzrə keyfiyyətli, etibarlı, eyni zamanda inn
               </div>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            {/* <div className="w-full px-4 lg:w-1/2">
               <div
                 className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
                 data-wow-delay=".2s"
@@ -69,7 +70,8 @@ Məqsədimiz müxtəlif dillər üzrə keyfiyyətli, etibarlı, eyni zamanda inn
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
-            </div>
+            </div> */}
+            <Loader/>
           </div>
         </div>
       </div>

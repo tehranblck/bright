@@ -11,7 +11,7 @@ const Blog = () => {
       (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
     )
-    .slice(0, 6);
+    .slice(0, 3);
 
   return (
     <section

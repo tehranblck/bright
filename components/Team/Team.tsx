@@ -1,68 +1,37 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
-import { mdiLinkedin, mdiTwitter, mdiInstagram } from '@mdi/js';
-import Icon from '@mdi/react';
 import Image from 'next/image';
+import { teamMembers } from './teamData';
+import Link from 'next/link';
 
-const teamMembers = [
-  {
-    name: 'Nərgiz Allahverdiyeva',
-    title: 'İngilis dili təlimçisi',
-    image: '/images/team/nergiz.jpg',
-  },
-  {
-    name: 'Elvira Ocaxquliyeva',
-    title: 'Rus dili  təlimçisi',
-    image: '/images/team/elvira.jpg',
-  },
-  {
-    name: 'Nərmin Cəfərova',
-    title: 'İngilis dili təlimçisi',
-    image: '/images/team/nermin.jpg',
-  },
-  {
-    name: 'Tehran Bayramov',
-    title: 'Front-end developer / təlimçi',
-    image: '/images/blog/Tehran.jpg',
-  },
-  {
-    name: 'Səbinə Hümbətova',
-    title: 'İngilis dili təlimçisi',
-    image: '/images/team/sebine.jpg',
-  },
-  {
-    name: 'Sevinc Məmmədova',
-    title: 'İngilis dili təlimçisi',
-    image: '/images/team/sevinc.jpg',
-  },
- 
-  {
-    name: 'Leyla Həsənova',
-    title: 'Rus dili təlimçisi',
-    image: '/images/team/leyla.jpg',
-  },
- 
-  {
-    name: 'Aysel Quliyeva',
-    title: 'İspan dili təlimçisi',
-    image: '/images/team/aysel.jpg',
-  },
+interface TeamProps {
+  loadmore: boolean;
+  textParagraph?: string;
+}
 
-];
+const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
+  const [showAll, setShowAll] = useState<boolean>(false);
+  const [expandedIndexes, setExpandedIndexes] = useState<number[]>([]);
 
-const Team = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visibleMembers = showAll ? teamMembers : teamMembers.slice(0, 4);
+  const visibleMembers = teamMembers
+
+  const toggleExpand = (index: number) => {
+    if (expandedIndexes.includes(index)) {
+      setExpandedIndexes(expandedIndexes.filter((i) => i !== index));
+    } else {
+      setExpandedIndexes([...expandedIndexes, index]);
+    }
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-transparent py-48">
+    <div className="flex items-center justify-center min-h-screen bg-transparent py-36">
       <div className="flex flex-col">
         <div className="flex flex-col mt-8">
           <div className="container max-w-7xl px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h1 className="text-black dark:text-white text-4xl font-bold mb-8">Müəllim Heyətimiz</h1>
-                <p className="text-gray-700 text-lg font-light">Müəllim hər şeydir</p>
+                <p className="text-gray-700 text-lg font-light">{textParagraph}</p>
               </div>
             </div>
 
@@ -70,7 +39,7 @@ const Team = () => {
               {visibleMembers.map((member, index) => (
                 <div key={index} className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4">
                   <div className="flex flex-col">
-                    <a href="#" className="mx-auto">
+                    <Link href="#" className="mx-auto">
                       <Image
                         width={300}
                         height={300}
@@ -78,34 +47,44 @@ const Team = () => {
                         src={member.image}
                         alt={`${member.name} - ${member.title}`}
                       />
-                    </a>
+                    </Link>
                     <div className="text-center mt-6">
                       <h1 className="text-white text-xl font-bold mb-1">{member.name}</h1>
                       <div className="text-gray-700 font-light mb-2">{member.title}</div>
-                      <div className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300">
-                        <a href="#" className="flex rounded-full hover:bg-indigo-50 h-10 w-10">
-                          <Icon path={mdiLinkedin} size={1} className="text-indigo-500 mx-auto mt-2" />
-                        </a>
-                        <a href="#" className="flex rounded-full hover:bg-blue-50 h-10 w-10">
-                          <Icon path={mdiTwitter} size={1} className="text-blue-300 mx-auto mt-2" />
-                        </a>
-                        <a href="#" className="flex rounded-full hover:bg-orange-50 h-10 w-10">
-                          <Icon path={mdiInstagram} size={1} className="text-orange-400 mx-auto mt-2" />
-                        </a>
+                      <div className="text-center">
+                        <button
+                          onClick={() => toggleExpand(index)}
+                          className="text-blue-500 underline mt-2 cursor-pointer"
+                        >
+                          {expandedIndexes.includes(index) ? 'Daha az' : 'Daha çox'}
+                        </button>
+                        <div
+                          className={`transition-max-height duration-300 ease-in-out overflow-hidden ${
+                            expandedIndexes.includes(index) ? 'max-h-40' : 'max-h-0'
+                          }`}
+                        >
+                          <p className="text-gray-500 mt-3">
+                            {expandedIndexes.includes(index) && (member.about)
+                              }
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mt-6">
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
-              >
-                {showAll ? 'Daha Az Göstər' : 'Daha Çox Göstər'}
-              </button>
-            </div>
+
+            {loadmore && (
+              <div className="flex justify-center mt-6">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
+                >
+                  {showAll ? 'Daha Az Göstər' : 'Daha Çox Göstər'}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

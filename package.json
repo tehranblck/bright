@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
+    "@mui/material": "^6.1.4",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "next": "^13.5.6",
