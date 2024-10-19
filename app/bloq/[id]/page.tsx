@@ -4,7 +4,6 @@ import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import Head from "next/head";
 import { useParams } from "next/navigation";
-import { useState } from "react";
 import blogData from "@/components/Blog/blogData";
 
 const BlogContent = ({ content }) => {
@@ -14,13 +13,13 @@ const BlogContent = ({ content }) => {
         if (part.type === "heading") {
           const HeadingTag = `h${part.level}` as keyof JSX.IntrinsicElements;
           return (
-            <HeadingTag key={index} className="mb-2 text-lg font-semibold">
+            <HeadingTag key={index} className="mb-2  text-black dark:text-white text-lg font-semibold">
               {part.text}
             </HeadingTag>
           );
         } else if (part.type === "paragraph") {
           return (
-            <p key={index} className="mb-4">
+            <p key={index} className="mb-4 text-black dark:text-white">
               {part.text}
             </p>
           );

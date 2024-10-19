@@ -12,6 +12,7 @@ interface TeamProps {
 
 const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
   const [showModal, setShowModal] = useState<number | null>(null);
+  const [visible,setVisible]=useState<boolean>(false)
 
   const openModal = (index: number) => {
     setShowModal(index); 
@@ -81,13 +82,13 @@ const Team: React.FC<TeamProps> = ({ loadmore, textParagraph }) => {
               ))}
             </div>
 
-            {loadmore && (
+           
+                {loadmore && (
               <div className="flex justify-center mt-6">
-                <ButtonTeam
-               
-                  onClick={() => setShowModal(null)}
-                  text="Daha Az Göstər"
-              
+                <button
+                  textColor='black'
+                  onClick={() => setVisible(!visible)} 
+                  text={visible ? "Daha Az Göstər" : "Daha Çox Göstər"}
                 />
               </div>
             )}
