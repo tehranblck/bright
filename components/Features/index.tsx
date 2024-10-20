@@ -33,7 +33,7 @@ const Features = () => {
           </div>
 
           {/* Button Section */}
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-6">
             {/* Eğer kurslar sayfasında değilsek butonu göster */}
             {!isCourses && (
               <button

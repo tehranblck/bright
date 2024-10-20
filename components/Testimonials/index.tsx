@@ -39,7 +39,8 @@ const Testimonials: React.FC<TestimonialProps> = ({button,text}) => {
           ))}
         </div>
 
-       {
+      <div className="flex w-full text-center items-center justify-center mt-6">
+      {
         button&&(
           <button
           onClick={() => setVisible(!visible)}
@@ -49,6 +50,7 @@ const Testimonials: React.FC<TestimonialProps> = ({button,text}) => {
         </button>
         )
        }
+      </div>
       </div>
 
       {/* SVG elemanları burada kalır */}
