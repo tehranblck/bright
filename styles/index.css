@@ -31,3 +31,15 @@
     @apply opacity-100;
   }
 }
+
+body{
+  transition-property:opacity,  background-color,  transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+} 
+.page-transition{
+  opacity: 0;
+  background-color: black;
+  transform: translateY(40px);
+  filter: blur(12px);
+}
