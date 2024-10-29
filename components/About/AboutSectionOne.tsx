@@ -14,7 +14,7 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const controls = useAnimation();
-  const [hasAnimated, setHasAnimated] = useState(false); // Animasyonun tekrar çalışmaması için
+  const [hasAnimated, setHasAnimated] = useState(false); // Section başlığı için tek seferlik animasyon kontrolü
   const { ref, inView } = useInView({
     threshold: 0.5, // %50 görünür olduğunda animasyon tetiklenir
   });
@@ -26,22 +26,33 @@ const AboutSectionOne = () => {
     }
   }, [controls, inView, hasAnimated]);
 
-  const List = ({ text }) => (
-    <motion.p
-      animate={controls}
-      initial="hidden"
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 },
-      }}
-      className="mb-5 flex items-center text-lg font-medium text-body-color"
-    >
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </motion.p>
-  );
+  const List = ({ text }) => {
+    const [hasAnimatedOnce, setHasAnimatedOnce] = useState(false);
+    const { ref: itemRef, inView: itemInView } = useInView({
+      threshold: 0.8,
+    });
+
+    useEffect(() => {
+      if (itemInView && !hasAnimatedOnce) {
+        setHasAnimatedOnce(true); 
+      }
+    }, [itemInView, hasAnimatedOnce]);
+
+    return (
+      <motion.p
+        ref={itemRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={hasAnimatedOnce ? { opacity: 1, y: 0 } : {}} 
+        transition={{ duration: 0.5 }}
+        className="mb-5 flex items-center text-lg font-medium text-body-color"
+      >
+        <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+          {checkIcon}
+        </span>
+        {text}
+      </motion.p>
+    );
+  };
 
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
