@@ -1,6 +1,10 @@
-import Image from "next/image";
+"use client";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import Loader from "./Cubic";
+import AnimatedDiv from "../Animated";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -9,13 +13,34 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const controls = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false); // Animasyonun tekrar çalışmaması için
+  const { ref, inView } = useInView({
+    threshold: 0.5, // %50 görünür olduğunda animasyon tetiklenir
+  });
+
+  useEffect(() => {
+    if (inView && !hasAnimated) {
+      controls.start("visible");
+      setHasAnimated(true); // İlk çalışmada animasyon tamamlanır ve bir daha tetiklenmez
+    }
+  }, [controls, inView, hasAnimated]);
+
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+    <motion.p
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+      }}
+      className="mb-5 flex items-center text-lg font-medium text-body-color"
+    >
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
       {text}
-    </p>
+    </motion.p>
   );
 
   return (
@@ -24,13 +49,25 @@ const AboutSectionOne = () => {
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Haqqımızda"
-                paragraph="Bright Academy 2017-ci ildə təsis olunub.
+              <AnimatedDiv animationType="slideY">
+                <motion.div
+                  ref={ref}
+                  animate={controls}
+                  initial="hidden"
+                  variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 50 },
+                  }}
+                >
+                  <SectionTitle
+                    title="Haqqımızda"
+                    paragraph="Bright Academy 2017-ci ildə təsis olunub.
 Bright Academy sosial məsuliyyətli davamlığa əsaslanan təşəbbüslər vasitəsilə Azərbaycan cəmiyyətinin innovativ, interaktiv metodlarla xarici dilin sürətli şəkildə öyrənilməsinə yönəlik yaradılmış xarici dil mərkəzidir. Biz birbaşa təsir gücünə malik vasitə kimi təhsilə əsaslanan innovativ yanaşma yolunu seçmişik. Hal-hazırda tədris mərkəzimizdə İngilis, Rus, Alman və Fransız dilləri tədris olunur.
 Məqsədimiz müxtəlif dillər üzrə keyfiyyətli, etibarlı, eyni zamanda innovativ və beynəlxalq standartlara cavab verən tədris vermək, təhsilli gənclər yetişdirərək onların təhsil və iş həyatlarında uğurlu olmalarına dəstək olmaqdır."
-                mb="44px"
-              />
+                    mb="44px"
+                  />
+                </motion.div>
+              </AnimatedDiv>
 
               <div
                 className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
@@ -52,26 +89,7 @@ Məqsədimiz müxtəlif dillər üzrə keyfiyyətli, etibarlı, eyni zamanda inn
               </div>
             </div>
 
-            {/* <div className="w-full px-4 lg:w-1/2">
-              <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
-                data-wow-delay=".2s"
-              >
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div> */}
-            <Loader/>
+            <Loader />
           </div>
         </div>
       </div>
