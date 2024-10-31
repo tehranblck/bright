@@ -26,8 +26,8 @@ const Blog = () => {
   return (
     <>
       <Head>
-        <title>Bloq səhifəsi | Bright Academy ilə dil öyrən</title>
-        <meta name="description" content="Dil kursu Bright Academy" />
+        <title>Bloq səhifəsi | Handex Academy ilə dil öyrən</title>
+        <meta name="description" content="Handex Academy" />
       </Head>
 
       <Breadcrumb
@@ -42,7 +42,7 @@ const Blog = () => {
               <div
                 key={blog.id}
                 onClick={() => router.push(`/bloq/${blog.id}`)}
-                className="w-full my-10 px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
+                className="my-10 w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
                 <SingleBlog blog={blog} />
               </div>

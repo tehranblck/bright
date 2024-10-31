@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import AnimatedDiv from "../Animated";
@@ -8,7 +8,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        style={{backgroundAttachment:'fixed'}}
+        style={{ backgroundAttachment: "fixed" }}
         className="relative  z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
@@ -18,33 +18,33 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <AnimatedDiv  animationType="fade" >
-                    <h1  className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      Bright Academy tədris mərkəzinə xoş gəlmisiniz!
-                    </h1>
+                <AnimatedDiv animationType="fade">
+                  <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                    Handex Academy tədris mərkəzinə xoş gəlmisiniz!
+                  </h1>
                 </AnimatedDiv>
-                <AnimatedDiv  animationType="fade" >
-                    <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                      Bir tədris mərkəzi kimi tələbələrimizin uğurunu öz uğurumuz
-                      olaraq dəyərləndiririk.
-                    </p>
+                <AnimatedDiv animationType="fade">
+                  <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                    Bir tədris mərkəzi kimi tələbələrimizin uğurunu öz uğurumuz
+                    olaraq dəyərləndiririk.
+                  </p>
                 </AnimatedDiv>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <AnimatedDiv  animationType="scale" >
-                  <Link
-                    href="https://wa.me/+994704390607"
-                    className="flex flex-row gap-1 rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  >
-                    <FaWhatsapp className="text-xl" /> Indi qoşul!
-                  </Link>
+                  <AnimatedDiv animationType="scale">
+                    <Link
+                      href="https://wa.me/+994704390607"
+                      className="flex flex-row gap-1 rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    >
+                      <FaWhatsapp className="text-xl" /> Indi qoşul!
+                    </Link>
                   </AnimatedDiv>
-                  <AnimatedDiv  animationType="scale" >
-                  <Link
-                    href="/haqqimizda"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Haqqımızda
-                  </Link>
+                  <AnimatedDiv animationType="scale">
+                    <Link
+                      href="/haqqimizda"
+                      className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    >
+                      Haqqımızda
+                    </Link>
                   </AnimatedDiv>
                 </div>
               </div>

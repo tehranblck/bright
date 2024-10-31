@@ -11,8 +11,8 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bright Academy",
-  description: "Bright Academy'yə Xoş Gəlmisiniz.",
+  title: "Handex Academy",
+  description: "Handex Academy'yə Xoş Gəlmisiniz.",
 };
 
 

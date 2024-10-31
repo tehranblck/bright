@@ -26,8 +26,8 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Haqqımızda"
-                paragraph="Bright Academy 2017-ci ildə təsis olunub.
-Bright Academy sosial məsuliyyətli davamlığa əsaslanan təşəbbüslər vasitəsilə Azərbaycan cəmiyyətinin innovativ, interaktiv metodlarla xarici dilin sürətli şəkildə öyrənilməsinə yönəlik yaradılmış xarici dil mərkəzidir. Biz birbaşa təsir gücünə malik vasitə kimi təhsilə əsaslanan innovativ yanaşma yolunu seçmişik. Hal-hazırda tədris mərkəzimizdə İngilis, Rus, Alman və Fransız dilləri tədris olunur.
+                paragraph="Handex Academy 2017-ci ildə təsis olunub.
+Handex Academy sosial məsuliyyətli davamlığa əsaslanan təşəbbüslər vasitəsilə Azərbaycan cəmiyyətinin innovativ, interaktiv metodlarla xarici dilin sürətli şəkildə öyrənilməsinə yönəlik yaradılmış xarici dil mərkəzidir. Biz birbaşa təsir gücünə malik vasitə kimi təhsilə əsaslanan innovativ yanaşma yolunu seçmişik. Hal-hazırda tədris mərkəzimizdə İngilis, Rus, Alman və Fransız dilləri tədris olunur.
 Məqsədimiz müxtəlif dillər üzrə keyfiyyətli, etibarlı, eyni zamanda innovativ və beynəlxalq standartlara cavab verən tədris vermək, təhsilli gənclər yetişdirərək onların təhsil və iş həyatlarında uğurlu olmalarına dəstək olmaqdır."
                 mb="44px"
               />

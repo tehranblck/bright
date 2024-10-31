@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="h-px w-full bg-gray-200 dark:bg-gray-700"></div>
         <div className="py-4">
           <p className="text-center text-base text-body-color dark:text-white">
-            Bright Academy &copy; {new Date().getFullYear()}
+            Handex Academy &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

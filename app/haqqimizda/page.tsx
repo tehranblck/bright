@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bright Academy |Dil kurslarımız və özümüz haqqında",
+  title: "Handex Academy |Dil kurslarımız və özümüz haqqında",
   description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
