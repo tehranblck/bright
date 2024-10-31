@@ -8,25 +8,24 @@ const NewsLatterBox = () => {
 
   return (
     <div
-      className="wow fadeInUp shadow-three dark:bg-gray-dark relative z-10 rounded-sm bg-white p-8 sm:p-11 lg:p-8 xl:p-11"
+      className="wow fadeInUp relative  z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11"
       data-wow-delay=".2s"
     >
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
         Bizimlə siz əlaqə saxlayın.
       </h3>
-      <Elaqe className='w-full p-0 '/>
+      <Elaqe className="w-full p-0 " />
       <Social />
-      <iframe className="mt-12 rounded-xl"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.464245205028!2d49.827639675093096!3d40.37640235809423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dbc42dba4a1%3A0x21b2b3488e89a7!2s197%20Suleyman%20Rahimov%20St%2C%20Baku%201009!5e0!3m2!1str!2saz!4v1728909374648!5m2!1str!2saz"
-            width="auto"
-            height="auto"
-            
-            style={{ border: "0" ,paddingBottom:'10px'}}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-      
+      <iframe
+        className="mt-12 rounded-xl"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.464245205028!2d49.827639675093096!3d40.37640235809423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dbc42dba4a1%3A0x21b2b3488e89a7!2s197%20Suleyman%20Rahimov%20St%2C%20Baku%201009!5e0!3m2!1str!2saz!4v1728909374648!5m2!1str!2saz"
+        width="auto"
+        height="auto"
+        style={{ border: "0", paddingBottom: "10px" }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
 
       <div>
         <span className="absolute left-2 top-7">

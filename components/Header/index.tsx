@@ -8,7 +8,6 @@ import AnimatedDiv from "../Animated";
 import { TransitionLink } from "../utils/TransitionLink";
 
 const Header = () => {
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);

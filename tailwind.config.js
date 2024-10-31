@@ -47,7 +47,7 @@ module.exports = {
         stroke: "#E3E8EF",
         "stroke-dark": "#353943",
         "bg-color-dark": "#171C28",
-        "bg-dark-mode": "#C70039", // Custom background color for dark mode
+        "bg-dark-mode": "#C70039",
       },
 
       boxShadow: {
@@ -66,6 +66,25 @@ module.exports = {
       },
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
+      },
+
+      // Animations
+      animation: {
+        "slide-in-top": "slide-in-top 0.3s ease-out forwards",
+      },
+
+      // Keyframes
+      keyframes: {
+        "slide-in-top": {
+          "0%": {
+            transform: "translateY(-50px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
       },
     },
   },

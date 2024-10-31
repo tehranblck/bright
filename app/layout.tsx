@@ -2,7 +2,6 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
@@ -25,12 +24,10 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
-         <div className="min-h-screen">
-         {children}
-         </div>
+          <div className="min-h-screen">{children}</div>
           <Footer />
           {/* <ScrollToTop /> */}
-          <WhatsAppMessage/>
+          <WhatsAppMessage />
           {/* <Card/> */}
         </Providers>
       </body>
@@ -38,6 +35,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";import WhatsAppMessage from "@/components/whatsappMessage/WhatsappMessage";
-import Card from "@/components/whatsappMessage/MessageLittle";
-
+import { Providers } from "./providers";
+import WhatsAppMessage from "@/components/whatsappMessage/WhatsappMessage";
