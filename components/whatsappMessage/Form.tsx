@@ -1,14 +1,26 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 interface FormMessageProps {
   onClose: () => void;
-  className: string;
+  className?: string;
 }
 
-const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
+const FormMessage: React.FC<FormMessageProps> = ({ onClose, className }) => {
   const [userMessage, setUserMessage] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Bileşen ilk yüklendiğinde görünür yapmak için küçük bir gecikme
+    const timer = setTimeout(() => setIsVisible(true), 10);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false); // Kapanma animasyonu
+    setTimeout(onClose, 300); // Animasyon süresi kadar bir gecikme ile bileşeni kapat
+  };
 
   const sendToWhatsApp = useCallback(() => {
     if (userMessage.trim() === "") return;
@@ -19,31 +31,43 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
   }, [userMessage]);
 
   return (
-    <div className="flex flex-col fixed right-4 bottom-2 z-50 w-[500px] h-[500px] md:w-[300px] bg-[#343541] rounded-lg text-white">
-      <div className="flex relative items-center justify-between w-full h-16 px-3">
-        <a className="text-[#6B6C7B] text-xl cursor-pointer">Whatsapp</a>
-        <div onClick={onClose} className="relative w-10 h-10 cursor-pointer flex justify-center items-center">
-          <IoIosArrowDown />
+    <div
+      className={`flex flex-col fixed right-2 bottom-3 z-50 w-[90%] max-w-md h-[45%] sm:h-[70%] md:h-[500px] bg-[#343541] rounded-lg text-white transition-all duration-300 ease-in-out transform ${isVisible ? "scale-100 opacity-100" : "scale-90 opacity-0"
+        } ${className}`}
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between w-full h-12 px-3 border-b border-[#2E2F3A]">
+        <a className="text-[#6B6C7B] text-lg sm:text-xl cursor-pointer">WhatsApp</a>
+        <div
+          onClick={handleClose}
+          className="w-8 h-8 flex items-center justify-center text-[#6B6C7B] cursor-pointer"
+        >
+          <IoIosArrowDown className="text-2xl" />
         </div>
       </div>
 
-      <div className="flex-1 w-full bg-[#232323] p-2">
-        {/* WhatsApp tarzı mesaj kutusu */}
-        <div className="relative  bg-[#2E2F3A] text-xl p-2 pl-4 pr-4 mb-4 rounded-lg max-w-[80%] text-left before:absolute before:left-[-5px] before:top-3 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[8px] before:border-r-[#2E2F3A]">
-          Salam sizə necə kömək edə bilərik?
+      {/* Mesaj Kutusu */}
+      <div className="flex-1 w-full bg-[#232323] p-4 overflow-y-auto">
+        <div className="relative bg-[#2E2F3A] text-sm sm:text-base p-3 mb-4 rounded-lg max-w-[80%] text-left text-white">
+          Salam, sizə necə kömək edə bilərik?
+          <span className="absolute left-[-5px] top-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[8px] border-r-[#2E2F3A]" />
         </div>
       </div>
 
-      <div className="flex items-center justify-center w-full h-16 px-3">
-        <div className="flex items-center bg-[#40414F] border border-[#2E2F3A] rounded-lg w-full h-10">
+      {/* Mesaj Yazma Alanı */}
+      <div className="flex items-center w-full h-12 px-3 bg-[#40414F] border-t border-[#2E2F3A]">
+        <div className="flex items-center bg-[#40414F] border border-[#2E2F3A] rounded-lg w-full h-10 px-2">
           <input
             type="text"
             placeholder="Mesajınızı yazın"
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
-            className="flex-grow text-xl bg-transparent text-white outline-none px-2"
+            className="flex-grow text-xs sm:text-sm md:text-base bg-transparent text-white outline-none"
           />
-          <div onClick={sendToWhatsApp} className="flex items-center justify-center w-8 h-8 cursor-pointer">
+          <div
+            onClick={sendToWhatsApp}
+            className="flex items-center justify-center w-8 h-8 cursor-pointer"
+          >
             <svg
               className="w-5 h-5 text-[#6B6C7B]"
               xmlns="http://www.w3.org/2000/svg"

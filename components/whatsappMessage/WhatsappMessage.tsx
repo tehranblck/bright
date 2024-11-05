@@ -35,7 +35,7 @@ const WhatsAppMessage: React.FC = () => {
   }, [openForm]);
 
   return (
-    <div className="fixed z-40 container mx-auto bottom-4 right-4 md:bottom-6 md:right-6  max-w-[100%]">
+    <div className="fixed z-40 container  bottom-4 right-4 md:bottom-6 md:right-6  max-w-[100%]">
       {/* Kart görünüyorsa göster */}
       {messageVisible && (
         <Card onClick={openForm} className="w-56 sm:w-64 md:w-72" /> // Mobil için genişlik ayarı
@@ -48,7 +48,7 @@ const WhatsAppMessage: React.FC = () => {
 
       {/* Form kapandığında veya küçültüldüğünde Badge görünür */}
       {badge && (
-        <BadgeComponent onClick={handleBadgeClick} className="w-12 h-12 sm:w-14 sm:h-14" />
+        <BadgeComponent onClick={handleBadgeClick} />
       )}
     </div>
   );
