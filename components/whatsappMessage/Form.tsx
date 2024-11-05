@@ -19,9 +19,9 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
   }, [userMessage]);
 
   return (
-    <div className="flex flex-col fixed right-4 bottom-2 z-50 md:w-[300px] h-[320px]  bg-[#343541] rounded-lg text-white">
-      <div className="flex relative items-center justify-between w-full h-10 px-3">
-        <a className="text-[#6B6C7B] cursor-pointer">Whatsapp</a>
+    <div className="flex flex-col fixed right-4 bottom-2 z-50 w-[500px] h-[500px] md:w-[300px] bg-[#343541] rounded-lg text-white">
+      <div className="flex relative items-center justify-between w-full h-16 px-3">
+        <a className="text-[#6B6C7B] text-xl cursor-pointer">Whatsapp</a>
         <div onClick={onClose} className="relative w-10 h-10 cursor-pointer flex justify-center items-center">
           <IoIosArrowDown />
         </div>
@@ -29,7 +29,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
 
       <div className="flex-1 w-full bg-[#232323] p-2">
         {/* WhatsApp tarzı mesaj kutusu */}
-        <div className="relative bg-[#2E2F3A] text-sm p-2 pl-4 pr-4 mb-4 rounded-lg max-w-[80%] text-left before:absolute before:left-[-5px] before:top-3 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[8px] before:border-r-[#2E2F3A]">
+        <div className="relative  bg-[#2E2F3A] text-xl p-2 pl-4 pr-4 mb-4 rounded-lg max-w-[80%] text-left before:absolute before:left-[-5px] before:top-3 before:w-0 before:h-0 before:border-t-[8px] before:border-t-transparent before:border-r-[8px] before:border-r-[#2E2F3A]">
           Salam sizə necə kömək edə bilərik?
         </div>
       </div>
@@ -41,7 +41,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
             placeholder="Mesajınızı yazın"
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
-            className="flex-grow bg-transparent text-white outline-none px-2"
+            className="flex-grow text-xl bg-transparent text-white outline-none px-2"
           />
           <div onClick={sendToWhatsApp} className="flex items-center justify-center w-8 h-8 cursor-pointer">
             <svg
