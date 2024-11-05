@@ -1,4 +1,4 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
+import AboutSectionOne from "@/components/About/Portfolio";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 // import ScrollUp from "@/components/Common/ScrollUp";
@@ -24,12 +24,12 @@ export default function Home() {
       <AboutSectionOne />
       <Features />
       {/* <Video /> */}
-      <Brands />
-      <Team textParagraph='Müəllim hərşeydir.' loadmore={true}/>
-      <Testimonials button={true} text={''}/>
-      <Pricing/>
+      {/* <Brands /> */}
+      {/* <Team textParagraph='Müəllim hərşeydir.' loadmore={true} /> */}
+      <Testimonials button={true} text={''} />
+      {/* <Pricing /> */}
       {/* <Alumni/> */}
-      <Blog />
+      {/* <Blog /> */}
       <Contact />
     </>
   );
