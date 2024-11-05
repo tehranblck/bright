@@ -19,7 +19,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
   }, [userMessage]);
 
   return (
-    <div className="flex flex-col fixed right-4 bottom-2 z-50 w-[300px] h-[320px]  bg-[#343541] rounded-lg text-white">
+    <div className="flex flex-col fixed right-4 bottom-2 z-50 w-full h-[320px] md:w-[300px] md:h-[320px]  bg-[#343541] rounded-lg text-white">
       <div className="flex relative items-center justify-between w-full h-10 px-3">
         <a className="text-[#6B6C7B] cursor-pointer">Whatsapp</a>
         <div onClick={onClose} className="relative w-10 h-10 cursor-pointer flex justify-center items-center">
