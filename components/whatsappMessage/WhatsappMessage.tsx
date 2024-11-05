@@ -35,7 +35,7 @@ const WhatsAppMessage: React.FC = () => {
   }, [openForm]);
 
   return (
-    <div className="fixed container mx-auto bottom-4 right-4 md:bottom-6 md:right-6 z-50 max-w-fit">
+    <div className="fixed z-40 container mx-auto bottom-4 right-4 md:bottom-6 md:right-6  max-w-fit">
       {/* Kart görünüyorsa göster */}
       {messageVisible && (
         <Card onClick={openForm} className="w-56 sm:w-64 md:w-72" /> // Mobil için genişlik ayarı
