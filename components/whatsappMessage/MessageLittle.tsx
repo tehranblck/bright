@@ -4,6 +4,7 @@ import Image from "next/image";
 
 interface CardProps {
   onClick: () => void;
+  className: string;
 }
 
 const Card: React.FC<CardProps> = ({ onClick }) => {

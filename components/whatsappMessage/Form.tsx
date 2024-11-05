@@ -4,13 +4,14 @@ import { IoIosArrowDown } from "react-icons/io";
 
 interface FormMessageProps {
   onClose: () => void;
+  className: string;
 }
 
 const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
   const [userMessage, setUserMessage] = useState("");
 
   const sendToWhatsApp = useCallback(() => {
-    if (userMessage.trim() === "") return; 
+    if (userMessage.trim() === "") return;
     const encodedMessage = encodeURIComponent(userMessage);
     const phoneNumber = "+994997301998";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -22,7 +23,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose }) => {
       <div className="flex relative items-center justify-between w-full h-10 px-3">
         <a className="text-[#6B6C7B] cursor-pointer">Whatsapp</a>
         <div onClick={onClose} className="relative w-10 h-10 cursor-pointer flex justify-center items-center">
-            <IoIosArrowDown />
+          <IoIosArrowDown />
         </div>
       </div>
 
