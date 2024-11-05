@@ -1,21 +1,27 @@
 "use client";
 import Link from "next/link";
-import { FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaArrowCircleDown, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import AnimatedDiv from "../Animated";
 
 const Hero = () => {
+  const handleScroll = () => {
+    const element = document.getElementById("portfolio"); // Hedef id'yi burada güncelledik
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+    }
+  };
   return (
     <>
       <section
         id="home"
         style={{ backgroundAttachment: "fixed" }}
-        className="relative  z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative  z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[90px] md:pt-[100px] xl:pb-[120px] xl:pt-[100px] 2xl:pb-[180px] 2xl:pt-[180px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div
-                className="wow fadeInUp mx-auto max-w-[800px] text-center"
+                className="wow fadeInUp mx-auto max-w-[800px] text-center flex flex-col items-center"
                 data-wow-delay=".2s"
               >
                 <AnimatedDiv animationType="fade">
@@ -46,7 +52,22 @@ const Hero = () => {
                       Haqqımızda
                     </Link>
                   </AnimatedDiv>
+
+
                 </div>
+                <AnimatedDiv>
+                  <button
+                    onClick={handleScroll}
+                    className="flex flex-col items-center justify-center mt-16 cursor-pointer animate-bounce transition-transform duration-300 hover:scale-105 group"
+                  >
+                    <h2 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary mb-2">
+                      Portfolyomuz
+                    </h2>
+                    <FaArrowCircleDown
+                      className="text-5xl text-primary dark:text-primary-light group-hover:text-primary-dark transition-colors duration-300"
+                    />
+                  </button>
+                </AnimatedDiv>
               </div>
             </div>
           </div>

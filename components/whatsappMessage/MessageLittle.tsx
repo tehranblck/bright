@@ -10,7 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ onClick, className }) => {
   return (
     <div
-      className={`flex shake bounce flex-col gap-2 w-[90%] sm:w-[70%] md:w-72 p-4 fixed right-2 bottom-0 sm:right-4 sm:bottom-4 text-xs sm:text-sm md:text-md z-50 ${className}`}
+      className={`flex shake bounce flex-col gap-2 w-[90%] md:w-[500px] sm:w-[70%]  p-4 fixed right-2 bottom-0 sm:right-2 sm:bottom-2 text-xs sm:text-sm md:text-md z-50 ${className}`}
       onClick={onClick}
     >
       <div className="info-alert cursor-pointer flex items-center justify-between p-3 sm:p-4 w-full h-fit rounded-lg bg-[#232531]">
@@ -20,9 +20,9 @@ const Card: React.FC<CardProps> = ({ onClick, className }) => {
             <Image
               src="/whatsapp.png"
               alt="whatsapp icon"
-              width={30} // Küçük ekranlar için boyut
-              height={30} // Küçük ekranlar için boyut
-              className="rounded-full sm:w-10 sm:h-10 md:w-12 md:h-12"
+              width={100} // Küçük ekranlar için boyut
+              height={100} // Küçük ekranlar için boyut
+              className="rounded-full md:w-[60px] "
             />
           </div>
           {/* Mesaj Metni */}
