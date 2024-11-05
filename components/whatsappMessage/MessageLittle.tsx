@@ -10,7 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ onClick }) => {
   return (
     <div
-      className="flex shake bounce flex-col gap-2 w-60 fixed right-4 bottom-2 sm:w-72 text-[10px] sm:text-xs z-50"
+      className="flex shake bounce flex-col gap-2 w-80 fixed right-4 bottom-2 sm:w-72 text-[10px] sm:text-xs z-50"
       onClick={onClick}
     >
       <div className="info-alert  cursor-pointer  flex items-center justify-between w-full h-12 sm:h-14 rounded-lg bg-[#232531] px-[10px]">
@@ -19,8 +19,8 @@ const Card: React.FC<CardProps> = ({ onClick }) => {
             <Image src="/whatsapp.png" alt="whatsapp icon" width={40} height={40} className="rounded-full" />
           </div>
           <div>
-            <p className="text-white">1 Mesajınız var...</p>
-            <p className="text-gray-500">Mesajı görmek için tıklayın...</p>
+            <p className="text-white text-md">1 Mesajınız var...</p>
+            <p className="text-gray-500 text-md">Mesajı görmek için tıklayın...</p>
           </div>
         </div>
         <button className="text-gray-600 hover:bg-white/10 p-1 rounded-md transition-colors ease-linear">
