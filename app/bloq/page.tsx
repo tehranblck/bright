@@ -1,5 +1,4 @@
 "use client";
-import SingleBlog from "@/components/Blog/page";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Head from "next/head";
@@ -44,7 +43,6 @@ const Blog = () => {
                 onClick={() => router.push(`/bloq/${blog.id}`)}
                 className="my-10 w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} />
               </div>
             ))}
           </div>
@@ -72,11 +70,10 @@ const Blog = () => {
                     <Link
                       href="#0"
                       onClick={() => handlePageChange(index + 1)}
-                      className={`flex h-9 min-w-[36px] items-center justify-center rounded-md ${
-                        currentPage === index + 1
-                          ? "bg-primary text-white"
-                          : "bg-body-color bg-opacity-[15%] text-body-color"
-                      } px-4 text-sm transition hover:bg-primary hover:bg-opacity-100 hover:text-white`}
+                      className={`flex h-9 min-w-[36px] items-center justify-center rounded-md ${currentPage === index + 1
+                        ? "bg-primary text-white"
+                        : "bg-body-color bg-opacity-[15%] text-body-color"
+                        } px-4 text-sm transition hover:bg-primary hover:bg-opacity-100 hover:text-white`}
                     >
                       {index + 1}
                     </Link>
