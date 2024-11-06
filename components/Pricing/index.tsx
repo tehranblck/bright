@@ -61,7 +61,7 @@ const Pricing = () => {
     if (!mövcudDillər.includes(dil)) {
       setDil(mövcudDillər[0]);
     }
-  }, [mövzu, dil,qiymetSeçimləri]);
+  }, [mövzu, dil, qiymetSeçimləri]);
 
   // Qiymət məlumatlarını almaq üçün funksiya
   const qiymetAl = (müddət: string, indeks: number) => {
@@ -82,7 +82,6 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Qiymətlərimiz"
-          paragraph="Dil və paket seçiminə uyğun qiymətləri görmək üçün dil və mövzunu seçin."
           center
           width="665px"
         />
@@ -92,11 +91,10 @@ const Pricing = () => {
             <button
               key={mövzuSeçim}
               onClick={() => setMövzu(mövzuSeçim)}
-              className={`${
-                mövzu === mövzuSeçim
+              className={`${mövzu === mövzuSeçim
                   ? "text-white bg-primary"
                   : "text-primary bg-gray-200"
-              } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
+                } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
             >
               {mövzuSeçim}
             </button>
@@ -109,11 +107,10 @@ const Pricing = () => {
               <button
                 key={dilSeçim}
                 onClick={() => setDil(dilSeçim)}
-                className={`${
-                  dil === dilSeçim
+                className={`${dil === dilSeçim
                     ? "text-white bg-primary"
                     : "text-primary bg-gray-200"
-                } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
+                  } px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 mx-2 transition-all duration-200`}
               >
                 {dilSeçim}
               </button>
