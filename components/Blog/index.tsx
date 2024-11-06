@@ -21,7 +21,6 @@ const Blog = () => {
       <div className="container">
         <SectionTitle
           title="Bloq Yazılarımız"
-          paragraph="Ən son yazılarımız..."
           center
         />
 
@@ -34,18 +33,17 @@ const Blog = () => {
               }}
               className="w-full"
             >
-              <SingleBlog blog={blog} />
             </div>
           ))}
         </div>
-     <div className="w-full flex justify-center mt-10">
-     <button
-                onClick={() => routerr.push('/bloq')}
-                className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
-              >
-               Bloqları oxu...
-              </button>
-     </div>
+        <div className="w-full flex justify-center mt-10">
+          <button
+            onClick={() => routerr.push('/bloq')}
+            className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
+          >
+            Bloqları oxu...
+          </button>
+        </div>
       </div>
     </section>
   );
