@@ -29,7 +29,6 @@ const Testimonials: React.FC<TestimonialProps> = ({ button, text }) => {
       <div className="container">
         <SectionTitle
           title="Müşteri geri dönüşleri'"
-          paragraph={text}
           center
         />
 
