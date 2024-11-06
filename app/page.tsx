@@ -7,8 +7,11 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Handex Academy",
-  description: "Handex Academy'yə Xoş Gəlmisiniz.",
+  title: "Produck - İçerik Üretim Ajansı",
+  description: "ProduckVideo İçerik ve Sosyal Medya Ajansı",
+  icons: {
+    icon: '/logo.svg'
+  }
 };
 
 

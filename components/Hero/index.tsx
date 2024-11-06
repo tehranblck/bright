@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
-import { FaArrowCircleDown, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaArrowCircleDown, FaWhatsapp } from "react-icons/fa";
 import AnimatedDiv from "../Animated";
 
 const Hero = () => {
   const handleScroll = () => {
-    const element = document.getElementById("portfolio"); // Hedef id'yi burada güncelledik
+    const element = document.getElementById("portfolio");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -15,59 +15,43 @@ const Hero = () => {
       <section
         id="home"
         style={{ backgroundAttachment: "fixed" }}
-        className="relative  z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[90px] md:pt-[100px] xl:pb-[120px] xl:pt-[100px] 2xl:pb-[180px] 2xl:pt-[180px]"
+        className="relative z-10 overflow-hidden bg-white pb-8 pt-32 dark:bg-gray-dark   md:pb-12 md:pt-20 xl:pb-16 xl:pt-20 2xl:pb-20 2xl:pt-28"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div
-                className="wow fadeInUp mx-auto max-w-[800px] text-center flex flex-col items-center"
+            <div className="w-full px-4 text-center">
+              <div style={{ width: '100%' }}
+                className="wow fadeInUp mx-auto !w-full text-center flex flex-col items-center"
                 data-wow-delay=".2s"
               >
                 <AnimatedDiv animationType="fade">
-                  <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                    Handex Academy tədris mərkəzinə xoş gəlmisiniz!
+                  <h1 className="mb-5 text-3xl text-center font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                    İşinizi görselleştiriyoruz!
                   </h1>
                 </AnimatedDiv>
                 <AnimatedDiv animationType="fade">
-                  <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                    Bir tədris mərkəzi kimi tələbələrimizin uğurunu öz uğurumuz
-                    olaraq dəyərləndiririk.
+                  <p className="mb-8 text-base leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                    Video, fotoğraf ve sosyal medya tasarımlarımızla işletmenizin bilinirliğini artırıyoruz.
                   </p>
                 </AnimatedDiv>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <AnimatedDiv animationType="scale">
                     <Link
                       href="https://wa.me/+994704390607"
-                      className="flex flex-row gap-1 rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                      className="flex flex-row gap-1 rounded-sm bg-[#1c7d50] px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                     >
-                      <FaWhatsapp className="text-xl" /> Indi qoşul!
+                      <FaWhatsapp className="text-xl" /> İletişim
                     </Link>
                   </AnimatedDiv>
                   <AnimatedDiv animationType="scale">
                     <Link
                       href="/haqqimizda"
-                      className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                      className="inline-block rounded-sm bg-black px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                     >
-                      Haqqımızda
+                      Portfolyomuz
                     </Link>
                   </AnimatedDiv>
-
-
                 </div>
-                <AnimatedDiv>
-                  <button
-                    onClick={handleScroll}
-                    className="flex flex-col items-center justify-center mt-16 cursor-pointer animate-bounce transition-transform duration-300 hover:scale-105 group"
-                  >
-                    <h2 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-primary mb-2">
-                      Portfolyomuz
-                    </h2>
-                    <FaArrowCircleDown
-                      className="text-5xl text-primary dark:text-primary-light group-hover:text-primary-dark transition-colors duration-300"
-                    />
-                  </button>
-                </AnimatedDiv>
               </div>
             </div>
           </div>
@@ -80,24 +64,9 @@ const Hero = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle
-              cx="277"
-              cy="63"
-              r="225"
-              fill="url(#paint0_linear_25:217)"
-            />
-            <circle
-              cx="17.9997"
-              cy="182"
-              r="18"
-              fill="url(#paint1_radial_25:217)"
-            />
-            <circle
-              cx="76.9997"
-              cy="288"
-              r="34"
-              fill="url(#paint2_radial_25:217)"
-            />
+            <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
+            <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
+            <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
             <circle
               cx="325.486"
               cy="302.87"
@@ -138,8 +107,8 @@ const Hero = () => {
                 y2="288"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#00FF00" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0" />
               </linearGradient>
               <radialGradient
                 id="paint1_radial_25:217"
@@ -149,8 +118,8 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
               >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+                <stop offset="0.145833" stopColor="#00FF00" stopOpacity="0" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0.08" />
               </radialGradient>
               <radialGradient
                 id="paint2_radial_25:217"
@@ -160,8 +129,8 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
               >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+                <stop offset="0.145833" stopColor="#00FF00" stopOpacity="0" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0.08" />
               </radialGradient>
               <linearGradient
                 id="paint3_linear_25:217"
@@ -171,8 +140,8 @@ const Hero = () => {
                 y2="351.421"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#00FF00" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_25:217"
@@ -182,8 +151,8 @@ const Hero = () => {
                 y2="448.882"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
+                <stop stopColor="#00FF00" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_25:217"
@@ -193,8 +162,8 @@ const Hero = () => {
                 y2="470"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
+                <stop stopColor="#00FF00" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint6_linear_25:217"
@@ -204,112 +173,9 @@ const Hero = () => {
                 y2="338.63"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#00FF00" />
+                <stop offset="1" stopColor="#00FF00" stopOpacity="0" />
               </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
-          <svg
-            width="364"
-            height="201"
-            viewBox="0 0 364 201"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-              stroke="url(#paint0_linear_25:218)"
-            />
-            <path
-              d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-              stroke="url(#paint1_linear_25:218)"
-            />
-            <path
-              d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-              stroke="url(#paint2_linear_25:218)"
-            />
-            <path
-              d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-              stroke="url(#paint3_linear_25:218)"
-            />
-            <circle
-              opacity="0.8"
-              cx="214.505"
-              cy="60.5054"
-              r="49.7205"
-              transform="rotate(-13.421 214.505 60.5054)"
-              stroke="url(#paint4_linear_25:218)"
-            />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
-            <defs>
-              <linearGradient
-                id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_25:218"
-                x1="156.389"
-                y1="69.2405"
-                x2="156.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_25:218"
-                x1="125.389"
-                y1="69.2405"
-                x2="125.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_25:218"
-                x1="93.8507"
-                y1="67.2674"
-                x2="89.9278"
-                y2="210.214"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:218"
-                x1="214.505"
-                y1="10.2849"
-                x2="212.684"
-                y2="99.5816"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <radialGradient
-                id="paint5_radial_25:218"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(220 63) rotate(90) scale(43)"
-              >
-                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                <stop offset="1" stopColor="white" stopOpacity="0.08" />
-              </radialGradient>
             </defs>
           </svg>
         </div>

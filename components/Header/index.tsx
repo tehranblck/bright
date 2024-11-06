@@ -6,6 +6,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import AnimatedDiv from "../Animated";
 import { TransitionLink } from "../utils/TransitionLink";
+import Image from "next/image";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -39,14 +40,14 @@ const Header = () => {
     }
   };
 
-  const pathname = usePathname(); // usePathname’i doğru kullanın
+  const pathname = usePathname();
 
   return (
     <>
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center justify-between ${sticky
-            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
-            : "absolute bg-transparent"
+          ? "fixed z-[9999] bg-white/50 bg-opacity-40 backdrop-blur-lg shadow-md border border-white/20 rounded-xl transition dark:bg-gray-dark dark:bg-opacity-30 dark:shadow-sticky-dark"
+          : "absolute bg-transparent"
           }`}
       >
         <AnimatedDiv className="w-full" animationType="slideY">
@@ -55,10 +56,9 @@ const Header = () => {
             <div className="flex items-center w-1/3">
               <Link
                 href="/"
-                className={`header-logo text-[rgb(74 108 247)] text-3xl font-bold ${sticky ? "py-5 lg:py-2" : "py-8"
-                  } `}
+                className={`header-logo text-[rgb(74 108 247)] text-3xl font-bold`}
               >
-                Handex
+                <Image width={100} height={100} alt="logo" src={'/logo.svg'} />
               </Link>
             </div>
 
@@ -71,9 +71,9 @@ const Header = () => {
                       {menuItem.path ? (
                         <TransitionLink
                           href={menuItem.path}
-                          className={`py-2 text-base lg:inline-flex ${pathname === menuItem.path
-                              ? "text-primary dark:text-white"
-                              : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                          className={`hover-slide-animation relative py-2 text-base lg:inline-flex ${pathname === menuItem.path
+                            ? "text-[#1c7d50] dark:text-white"
+                            : "text-dark hover:text-[#17422e] dark:text-white/70 dark:hover:text-white"
                             }`}
                         >
                           {menuItem.title}
@@ -120,7 +120,7 @@ const Header = () => {
 
             {/* ThemeToggler ve Navbar Toggle - Sağ */}
             <div className="flex items-center w-1/3 justify-end space-x-4">
-              <ThemeToggler />
+              {/* <ThemeToggler /> */}
               <button
                 onClick={navbarToggleHandler}
                 id="navbarToggler"

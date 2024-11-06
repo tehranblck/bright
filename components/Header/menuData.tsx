@@ -19,16 +19,21 @@ const menuData: Menu[] = [
   //   path: "/bloq",
   //   newTab: false,
   // },
+
   {
-    id: 3,
-    title: "İletişim",
-    path: "/iletisim",
-    newTab: false,
-  },
-  {
-    id: 4,
+    id: 2,
     title: "Yorumlar",
     path: "/yorumlar",
+    newTab: false,
+  }, {
+    id: 3,
+    title: "Portfolyomuz",
+    path: "/portfolyo",
+    newTab: false,
+  }, {
+    id: 4,
+    title: "İletişim",
+    path: "/iletisim",
     newTab: false,
   }
   // {
