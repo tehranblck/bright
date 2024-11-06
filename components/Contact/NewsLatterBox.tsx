@@ -12,7 +12,7 @@ const NewsLatterBox = () => {
       data-wow-delay=".2s"
     >
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Bizimlə siz əlaqə saxlayın.
+        Bizimle siz iletişime geçin.
       </h3>
       <Elaqe className="w-full p-0 " />
       <Social />
