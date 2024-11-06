@@ -40,7 +40,7 @@ const Portfolio = () => {
             <div className="w-full px-4 mb-8">
               <SectionTitle
                 title="Portfolyomuz"
-                paragraph="Örnek çalışmalarımıza dair örnek videoları aşağıda izleyebilirsiniz."
+
                 mb="8"
               />
             </div>

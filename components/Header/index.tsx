@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import AnimatedDiv from "../Animated";
 import { TransitionLink } from "../utils/TransitionLink";
@@ -58,7 +57,7 @@ const Header = () => {
                 href="/"
                 className={`header-logo text-[rgb(74 108 247)] text-3xl font-bold`}
               >
-                <Image width={100} height={100} alt="logo" src={'/logo.svg'} />
+                <Image width={150} height={150} alt="logo" src={'/logo.svg'} />
               </Link>
             </div>
 
