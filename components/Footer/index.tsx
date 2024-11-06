@@ -16,7 +16,7 @@ const Footer = () => {
                 href="/"
                 className="mb-4 inline-block text-2xl font-bold text-black dark:text-white"
               >
-                <Image src={"/logo.svg"} alt="logo" width={100} height={100} />
+                <Image src={"/logo.svg"} alt="logo" width={150} height={150} />
               </Link>
               <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
                 Produck olarak, markaların ürün ve hizmetlerini en iyi şekilde anlatacak yüksek kaliteli, özgün ve yaratıcı video ve fotoğraf içerikleri sunuyoruz.
