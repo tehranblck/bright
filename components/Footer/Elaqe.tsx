@@ -4,7 +4,7 @@ interface ElaqeProps {
 }
 
 const Elaqe: React.FC<ElaqeProps> = ({ className, elaqe }) => {
-  const emailAddress = "info@Handex.az";
+  const emailAddress = "produckfilm@gmail.com";
   const emailLink = `mailto:${emailAddress}`;
   return (
     <div className={className}>
@@ -16,10 +16,10 @@ const Elaqe: React.FC<ElaqeProps> = ({ className, elaqe }) => {
           <li className="mb-4 text-base text-body-color dark:text-body-color-dark">
             <span className="mr-2 font-bold">Telefon:</span>
             <a
-              href="tel:+994704390607"
+              href="tel:+90 551 395 44 20"
               className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
             >
-              +994 70 439 06 07
+              +90 551 395 44 20
             </a>
           </li>
 
@@ -33,8 +33,7 @@ const Elaqe: React.FC<ElaqeProps> = ({ className, elaqe }) => {
             </a>
           </li>
           <li className="mb-4 text-base text-body-color dark:text-body-color-dark">
-            <span className="mr-2 font-bold">Ünvan:</span> Bakı, Süleyman
-            Rəhimov
+            <span className="mr-2 font-bold">Adres:</span> Avcılar, Gümüşpala Mesut sokak no 7 Istanbul
           </li>
         </ul>
       </div>

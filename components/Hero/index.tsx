@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <AnimatedDiv animationType="scale">
                     <Link
-                      href="https://wa.me/+994704390607"
+                      href="https://wa.me/+905513954420"
                       className="flex flex-row gap-1 rounded-sm bg-[#1c7d50] px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                     >
                       <FaWhatsapp className="text-xl" /> İletişim

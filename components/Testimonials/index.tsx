@@ -6,18 +6,18 @@ import { testimonialData } from "./testimonialData";
 import { useEffect, useState } from "react";
 
 
-interface TestimonialProps{
-  button:boolean;
-  text?:string;
+interface TestimonialProps {
+  button: boolean;
+  text?: string;
 
 }
 
-const Testimonials: React.FC<TestimonialProps> = ({button,text}) => {
+const Testimonials: React.FC<TestimonialProps> = ({ button, text }) => {
   const path = usePathname();
   const [visible, setVisible] = useState<boolean>(true);
-  const DisplayTestimonial=visible?testimonialData:testimonialData.slice(0,3)
+  const DisplayTestimonial = visible ? testimonialData : testimonialData.slice(0, 3)
 
-  
+
   useEffect(() => {
     if (path === '/') {
       setVisible(false);
@@ -28,7 +28,7 @@ const Testimonials: React.FC<TestimonialProps> = ({button,text}) => {
     <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Tələbələrimizin haqqımızda düşüncələri"
+          title="Müşterilerimizin hakkımızda söyledikleri"
           paragraph={text}
           center
         />
@@ -39,18 +39,18 @@ const Testimonials: React.FC<TestimonialProps> = ({button,text}) => {
           ))}
         </div>
 
-      <div className="flex w-full text-center items-center justify-center mt-6">
-      {
-        button&&(
-          <button
-          onClick={() => setVisible(!visible)}
-          className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors mt-4"
-        >
-          {visible ? "Daha Az Göstər" : "Daha Çox Göstər"}
-        </button>
-        )
-       }
-      </div>
+        <div className="flex w-full text-center items-center justify-center mt-6">
+          {
+            button && (
+              <button
+                onClick={() => setVisible(!visible)}
+                className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors mt-4"
+              >
+                {visible ? "Daha fazla Göster" : "Daha az Göster"}
+              </button>
+            )
+          }
+        </div>
       </div>
 
       {/* SVG elemanları burada kalır */}

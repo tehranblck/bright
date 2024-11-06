@@ -25,7 +25,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose, className }) => {
   const sendToWhatsApp = useCallback(() => {
     if (userMessage.trim() === "") return;
     const encodedMessage = encodeURIComponent(userMessage);
-    const phoneNumber = "+994997301998";
+    const phoneNumber = "+905513954420";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   }, [userMessage]);
