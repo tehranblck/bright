@@ -49,7 +49,7 @@ const FormMessage: React.FC<FormMessageProps> = ({ onClose, className }) => {
       {/* Mesaj Kutusu */}
       <div className="flex-1 w-full bg-[#232323] p-4 overflow-y-auto">
         <div className="relative bg-[#2E2F3A] text-sm sm:text-base p-3 mb-4 rounded-lg max-w-[80%] text-left text-white">
-          Salam, sizə necə kömək edə bilərik?
+          Merhaba. Size nasıl yardimci olabiliriz?
           <span className="absolute left-[-5px] top-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[8px] border-r-[#2E2F3A]" />
         </div>
       </div>
