@@ -45,7 +45,7 @@ const Hero = () => {
                   </AnimatedDiv>
                   <AnimatedDiv animationType="scale">
                     <Link
-                      href="/haqqimizda"
+                      href="/portfolyo"
                       className="inline-block rounded-sm bg-black px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                     >
                       Portfolyomuz
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -178,7 +178,7 @@ const Hero = () => {
               </linearGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
       </section>
     </>
   );

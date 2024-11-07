@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@hookform/resolvers": "^3.9.1",
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
@@ -22,15 +23,19 @@
     "latest": "^0.2.0",
     "next": "^13.5.6",
     "next-themes": "^0.2.1",
+    "nodemailer": "^6.9.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.1",
     "react-icons": "^5.3.0",
     "react-intersection-observer": "^9.13.1",
     "react-modal-video": "^2.0.0",
     "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.6",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
-    "swiper": "^6.8.4"
+    "swiper": "^6.8.4",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",

@@ -50,14 +50,14 @@ const Header = () => {
           }`}
       >
         <AnimatedDiv className="w-full" animationType="slideY">
-          <div className="container mx-auto flex items-center justify-between px-4">
+          <div className="container mx-auto py-2 flex items-center justify-between px-4">
             {/* Logo Bölümü - Sol */}
             <div className="flex items-center w-1/3">
               <Link
                 href="/"
                 className={`header-logo text-[rgb(74 108 247)] text-3xl font-bold`}
               >
-                <Image width={150} height={150} alt="logo" src={'/logo.svg'} />
+                <Image width={120} height={120} alt="logo" src={'/logo.svg'} />
               </Link>
             </div>
 
