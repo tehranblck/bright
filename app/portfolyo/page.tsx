@@ -15,7 +15,7 @@ const AboutPage = () => {
     <>
       <Breadcrumb pageName="Haqqımızda" description="" />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
     </>
   );
 };
