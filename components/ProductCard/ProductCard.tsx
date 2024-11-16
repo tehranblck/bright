@@ -8,9 +8,10 @@ const ProductCard = ({ image }: { image: string }) => {
                 <Image
                     src={image}
                     alt="Poster"
+                    quality={86}
                     className="w-full h-auto object-cover"
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={500}
                 />
             </Link>
         </div>
