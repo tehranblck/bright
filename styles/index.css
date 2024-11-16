@@ -7,6 +7,8 @@
 
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  background-color: white;
 }
 
 /* Tailwind ile kayan çizgi hover animasyonu */

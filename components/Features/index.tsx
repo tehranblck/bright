@@ -1,52 +1,36 @@
 "use client";
-import { useEffect, useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
-import SingleFeature from "./SingleFeature";
-import featuresData from "./featuresData";
-import { usePathname } from "next/navigation";
+import ProductCard from "../ProductCard/ProductCard";
+
+
+const images = ['/poster1.png', '/poster2.png', '/poster3.png', '/poster4.png'];
 
 const Features = () => {
-  const [hidden, setHidden] = useState<boolean>(true);
-  const [isCourses, setIsCourses] = useState<boolean>(false);
-  const path = usePathname();
-
-  // Eğer kurslar sayfasındaysanız, tüm özellikleri gösterin
-  useEffect(() => {
-    if (path === "/kurslar") {
-      setIsCourses(true);
-      setHidden(false);  // Bu sayede tüm özellikler gösterilir
-    }
-  }, [path]);
-
-  const dataToShow = hidden ? featuresData.slice(0, 3) : featuresData;
-
   return (
-    <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="container">
-          <SectionTitle title="Hizmetlerimiz" center />
-
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {dataToShow.map((feature) => (
-              <SingleFeature key={feature.id} feature={feature} />
-            ))}
-          </div>
-
-          {/* Button Section */}
-          <div className="flex justify-center mt-6">
-            {/* Eğer kurslar sayfasında değilsek butonu göster */}
-            {!isCourses && (
-              <button
-                onClick={() => setHidden(!hidden)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors"
-              >
-                {hidden ? "Daha Çok Göster" : "Daha Az Göster"}
-              </button>
-            )}
-          </div>
+    <section id="features" className="py-16 md:py-20 lg:py-28">
+      <div className="mx-auto">
+        {/* Başlık */}
+        <div className="mt-8">
+          <h2 className="mb-4 text-3xl font-bold !leading-tight text-center text-black dark:text-white sm:text-4xl md:text-[45px]">
+            Hizmetlerimiz
+          </h2>
         </div>
-      </section>
-    </>
+
+        {/* Poster Grid */}
+        <div className="flex flex-wrap mt-8 -mx-2 justify-center">
+          {images.map((image, index) => (
+            <div
+              key={index} // Görselin sırasını key olarak kullanıyoruz.
+              className="w-1/2 sm:w-1/2 lg:w-1/4 p-2 flex justify-center"
+            >
+              <div className="w-full max-w-sm">
+                {/* ProductCard Bileşeni */}
+                <ProductCard image={image} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

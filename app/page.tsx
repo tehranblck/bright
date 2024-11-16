@@ -19,9 +19,10 @@ export default function Home() {
   return (
     <>
       {/* <ScrollUp /> */}
-      <Hero />
-      <AboutSectionOne />
+      {/* <Hero /> */}
       <Features />
+      <AboutSectionOne />
+
       {/* <Video /> */}
       {/* <Brands /> */}
       {/* <Team textParagraph='Müəllim hərşeydir.' loadmore={true} /> */}
