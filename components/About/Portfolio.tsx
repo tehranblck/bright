@@ -33,7 +33,7 @@ const Portfolio = () => {
   const videosToShow = showAllVideos ? videoData : videoData.slice(0, 3);
 
   return (
-    <section id="portfolio" className="pt-12 md:pt-8 lg:pt-10">
+    <section id="portfolio" className="pt-12 md:pt-4 lg:pt-4">
       <div className="container mx-auto px-4">
         <div className="border-b border-body-color/[.15] pb-12 dark:border-white/[.15] md:pb-16 lg:pb-20">
           <div className="flex flex-wrap items-center">

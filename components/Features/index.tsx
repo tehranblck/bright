@@ -6,7 +6,7 @@ const images = ['/poster1.png', '/poster2.png', '/poster3.png', '/poster4.png'];
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-20 lg:py-28">
+    <section id="features" className="pt-16 md:pt-16 lg:pt-24">
       <div className="mx-auto">
         {/* Başlık */}
         <div className="mt-8">
