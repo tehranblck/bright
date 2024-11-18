@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className="min-h-screen">{children}</div>
+          <GoogleTagManager gtmId="GTM-NBR3MDZJ" />
           <Footer />
           {/* <ScrollToTop /> */}
           <WhatsAppMessage />
