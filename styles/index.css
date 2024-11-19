@@ -71,3 +71,22 @@ body {
   transform: translateY(40px);
   filter: blur(12px);
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.hover:scale-105 {
+  transition: transform 0.3s ease-in-out;
+}

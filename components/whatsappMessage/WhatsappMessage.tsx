@@ -1,37 +1,65 @@
+import React from 'react';
 
 const WhatsAppMessage: React.FC = () => {
-
-
-
-
-
-
   return (
-    <div className="fixed  container  bg-gray-300 z-50 bottom-4 right-4 md:bottom-6 md:right-6  max-w-[100%]">
-
-      <div className="fixed bottom-0 left-0 z-50 w-full h-[60px] pembearkaplan">
-        <div className="flex  justify-between items-center h-full max-w-lg mx-auto" style={{ fontSize: '13px' }}>
-          <div className="flex-1 text-center justify-center items-center content-center telefon_tag ">
-            <a href="tel:+905513954420" className="telefon_tag inline-flex text-center justify-center items-center content-center space-x-1 p-4 w-full" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2 telefon_tag" fill="none" viewBox="0 0 20 20" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"></path>
+    <div className="fixed container z-50 bottom-4 right-4 md:bottom-6 md:right-6 max-w-[100%] animate-fade-in">
+      <div className="fixed bottom-0 left-0 z-50 bg-[#4b6df6] w-full h-[60px] pembearkaplan shadow-lg">
+        <div
+          className="flex justify-between items-center h-full max-w-lg mx-auto"
+          style={{ fontSize: '13px' }}
+        >
+          <div className="flex-1 text-center justify-center items-center content-center telefon_tag">
+            <a
+              href="tel:+905513954420"
+              className="telefon_tag inline-flex text-center justify-center items-center content-center space-x-1 p-4 w-full hover:scale-105 transition-transform duration-300"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 mr-2 telefon_tag"
+                fill="none"
+                viewBox="0 0 20 20"
+                stroke="white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
+                ></path>
               </svg>
-
-              <span className="font-medium telefon_tag beyazyazi">Telefon Et</span>
+              <span className="font-medium telefon_tag text-white beyazyazi">
+                Telefon Et
+              </span>
             </a>
           </div>
           <div className="flex-1 text-center justify-center items-center content-center whatsapp_tag">
-            <a href="https://api.whatsapp.com/send?phone=905513954420" className="whatsapp_tag inline-flex text-center justify-center items-center content-center space-x-1 p-4 w-full">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2 whatsapp_tag" fill="white" viewBox="0 0 448 512" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+            <a
+              href="https://api.whatsapp.com/send?phone=905513954420"
+              className="whatsapp_tag inline-flex text-center justify-center items-center content-center space-x-1 p-4 w-full hover:scale-105 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 mr-2 whatsapp_tag"
+                fill="white"
+                viewBox="0 0 448 512"
+                stroke="white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                ></path>
               </svg>
-              <span className="font-medium whatsapp_tag beyazyazi">WhatsApp</span>
+              <span className="font-medium whatsapp_tag text-white beyazyazi">
+                WhatsApp
+              </span>
             </a>
           </div>
         </div>
       </div>
-
-    </div >
+    </div>
   );
 };
 
